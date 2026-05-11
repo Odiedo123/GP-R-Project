@@ -3,12 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/index.css" />
+    <link rel="stylesheet" href="/static/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="importmap">
+        {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+        }
+        }
+    </script>
     <title>Why African Voices Go Unheard</title>
 </head>
 <body>
+    <div class="section">
+        <h1>Are African Voices In Tech Heard?</h1>
+        <div id="threejs-model"></div>
+    </div>
+    <div class="section" id="quote-section">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
     
+
+    
+    <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
