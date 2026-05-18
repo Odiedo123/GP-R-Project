@@ -35,8 +35,7 @@ scene.add(fill);
 
 /* ── 3. Load free model (Khronos Duck.glb) ────────────────── */
 // Swap the URL for any other .glb/.gltf you like
-const MODEL_URL =
-  'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/Duck/glTF-Binary/Duck.glb';
+const MODEL_URL = '/static/models/the_hut.glb';
 
 let model = null;
 
@@ -50,9 +49,13 @@ new GLTFLoader().load(
     const centre = box.getCenter(new THREE.Vector3());
     const size   = box.getSize(new THREE.Vector3()).length();
     model.position.sub(centre);
-    model.scale.setScalar(2.5 / size);
+    model.scale.setScalar(4 / size);
 
     scene.add(model);
+    
+    const worldBox    = new THREE.Box3().setFromObject(model);
+    const worldCentre = worldBox.getCenter(new THREE.Vector3());
+    camera.lookAt(worldCentre);
   },
   undefined,
   (err) => console.error('Model load error:', err)
