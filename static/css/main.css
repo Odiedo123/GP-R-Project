@@ -22,6 +22,14 @@ h1{
   font-size: 4em;
 }
 
+h2{
+  font-size: 1.6em;
+}
+
+h1.h2{
+  font-family: "Roboto", sans-serif;
+}
+
 .blob-bg {
   position: fixed;
   inset: 0;
@@ -115,6 +123,12 @@ h1{
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   margin-top: 5vh;
+}
+
+#highlighter{
+  background-color: orange;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  white-space: nowrap;
 }
 
 #threejs-model {
