@@ -7,10 +7,15 @@ body{
   background-color: #000;
   overflow-x: hidden;
   overflow-y:scroll;
+  height: auto; 
 }
 
 p,h1,h2,h3 {
   color: white;
+}
+
+p{
+  font-family: "Nunito", sans-serif;
 }
 
 h1{
@@ -97,17 +102,19 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 98vw;
   height: 90vh;
-  margin-top: 5vh;
-  border: 3px solid red;
+  margin-top: 15vh;
+  overflow: hidden;
+  border: 3px solid green;
 }
 
 #first{
   width: 100vw;
-  background: rgba(0, 62, 168, 0.4);
+  background: rgba(0, 168, 101, 0.352);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
+  margin-top: 5vh;
 }
 
 #threejs-model {
@@ -117,31 +124,100 @@ h1{
 }
 
 #quote-section{
-  padding-left: 100px;
+  width: 98vw; 
+  justify-content: center;
   flex-direction: row;
+  border: 1px solid grey;
+  background: rgb(109, 109, 109, 0.352);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 #quote-section div{
   padding-left: 10px;
   overflow: visible;
-  height: 90vh;
-  width: 33vw;
+  height: 100%;
+  width: 33%;
 }
 
 #quote-section div p{
   margin-top: 50px;
   font-size: 1.7em;
   white-space: nowrap;
+  font-family: "Playwrite GB J Guides", cursive;
+}
+
+#img-place{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#baldwin{
+  margin-top: 100px;
+  height: 600px;
+  width: auto;
 }
 
 #R{
   margin-left: -16.5vw;
+  white-space: pre;
 }
 
 #R1{
-  margin-left: 8vw;
+  margin-left: 7vw;
 }
 
 #R2{
-  margin-left: 18vw;
+  margin-left: 16vw;
 }
+
+#R3{
+  margin-left: 35vw;
+}
+
+#third-section{
+  justify-content: center;
+  flex-direction: row;
+}
+
+#third-section div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48%;
+  height: 100%;
+}
+
+#third-section div p{
+  font-size: 1.4em;
+}
+
+[id="4L"],
+[id="4R"] {
+  flex: 1;
+  padding: 2rem;
+  transition: transform 0.75s cubic-bezier(0.86, 0, 0.07, 1);
+  will-change: transform;
+}
+
+[id="4L"].slide-out-left  { transform: translateX(-120vw); }
+[id="4R"].slide-out-right { transform: translateX( 120vw); }
+
+/* ── Sixth-section panels (injected by JS) ─────────────────────── */
+.sixth-panel {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.75s cubic-bezier(0.86, 0, 0.07, 1);
+  will-change: transform;
+}
+
+.sixth-panel--left  { transform: translateX(-120vw); }
+.sixth-panel--right { transform: translateX( 120vw); }
+.sixth-panel--entered { transform: translateX(0); }

@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="/static/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
     <script type="importmap">
         {
         "imports": {
@@ -30,62 +34,488 @@
         <div class="blob"></div>
         <div class="blob"></div>
     </div>
-    <div class="section" id="first">
-        <h1>How are African Tech Stories Represented?</h1>
+    <div class="section" id="first">                    <!--First Section-->
+        <h1>How are Africans Represented In Global Media?</h1>
         <div id="threejs-model"></div>
     </div>
-    <div class="section" id="quote-section">
+    <div class="section" id="quote-section">            <!--Second section-->
         <div>                                                                            
-            <p>It is a peculiar triumph of society that it is able to convince those<br>
-                decree; It has the force and the weapons to translate <br>
-                actually made so insofar<br>
+            <p>It is a peculiar triumph of society that it is able to<br>
+                status of the reality of this decree; It has the<br>
+                into fact so that the allegedly inferior<br>
+                societal realities<br>
         </div>
-        <div></div>
+        <div id="img-place">
+            <img src="{{ url_for('static', filename='img/James-Baldwin.png') }}" alt="James Baldwin" id="baldwin">
+        </div>
         <div>                                                                                           
-            <p id="R"> people to whom it has given inferior status of the reality of this<br>
-                <span id="R1">its dictum into fact so that the allegedly inferior are<br></span>
-                <span id="R2">as the societal realities are concerned.<br></span>
+            <p id="R">    convince those people to whom it has given inferior<br>
+                <span id="R1">force and the weapons to translate its dictum<br></span>
+                <span id="R2"> are actually made so insofar as the<br></span>
+                <span id="R3">are concerned.</span>
             </p>
         </div>
     </div>
-    <div class="section">
-        <p>African representation in western media is alarming moreso in tech.
-            With stories swept under the rug and stereotypes perpetuated even by the language used something has to change but firstly why does this matter?</p>
-        <dotlottie-wc
-            src="https://lottie.host/8427bbca-1339-4b55-8e69-d7adbb5b7a68/CpLjpMpCrV.lottie"
-            style="width: 300px;height: 300px"
-            autoplay
-            loop
-        ></dotlottie-wc>
+    <div class="section" id="third-section">        <!--Third Section-->
+        <div>
+            <h2>Africa?</h2>
+            <p> Through media we get news,
+                through Youtube we watch videos and through Whatsapp we talk with family.
+                but what does this mean for the African context?
+            </p>
+        </div>
+        <div>
+            <dotlottie-wc
+                src="https://lottie.host/8427bbca-1339-4b55-8e69-d7adbb5b7a68/CpLjpMpCrV.lottie"
+                style="width: 650px;height: 650px"
+                autoplay
+                loop
+            ></dotlottie-wc>
+        </div>
     </div>
-    <div class="section">
+        <div class="section">   <!--Fourth Section -->
+        <h2>Video</h2>
+        <iframe width="1120"
+         height="630"
+          src="https://www.youtube.com/embed/bAwQLsVXYVo?si=3trNK7-mJ1FXcLUd" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+        </iframe>
+    </div>
+    <div class="section"> <!--Fifth Section -->
         <div id="4L">
-            <h2>Why does this matter?</h2>
-            <p> Perpetuation of stereotypes .... </p>
+            <h2>Tech In Africa</h2>
+            <p>The tech sector in Africa is rapidly growing with millions joining the WWW each day.
+                Their innovations can cause breakthroughs but first have to be discovered by Western sources.
+                These stereotypes hinder economic development with far reaching effects to even the most brillian =t African minds are shuned.
+            </p>
         </div>
         <div id="4R">
             <p>Placeholder text
 
         </div>
     </div>
-    <div class="section">
+    <div class="section">  <!-- Sixth Section -->
         <h2>Statistics to back it up</h2>
+        <div id="chart">
+            
+            <style>
+                /* All styles scoped to #chart so nothing bleeds into your page */
+                #chart {
+                --g-dark:   #0a1a0d;
+                --g-mid:    #122b16;
+                --g-border: #1e4d24;
+                --g-accent: #4caf50;
+                --g-light:  #81c784;
+                --g-pale:   #c8e6c9;
+                --g-text:   #dcedc8;
+                --g-muted:  #558b2f;
+            
+                font-family: 'Georgia', serif;
+                background: var(--g-dark);
+                border: 1px solid var(--g-border);
+                border-radius: 20px;
+                padding: 2.5rem 2rem 2rem;
+                max-width: 920px;
+                margin: 2rem auto;
+                box-shadow: 0 8px 48px rgba(0,0,0,0.5), inset 0 1px 0 rgba(76,175,80,0.15);
+                position: relative;
+                overflow: hidden;
+                }
+            
+                /* Subtle grid texture */
+                #chart::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-image:
+                    linear-gradient(rgba(76,175,80,0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(76,175,80,0.03) 1px, transparent 1px);
+                background-size: 32px 32px;
+                pointer-events: none;
+                }
+            
+                #chart .chart-header {
+                text-align: center;
+                margin-bottom: 1.75rem;
+                position: relative;
+                }
+            
+                #chart .chart-header h3 {
+                font-size: 1.05rem;
+                font-family: 'Courier New', monospace;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--g-muted);
+                margin: 0 0 0.35rem;
+                font-weight: normal;
+                }
+            
+                #chart .chart-header h2 {
+                font-size: 1.6rem;
+                color: var(--g-text);
+                margin: 0 0 0.6rem;
+                font-weight: normal;
+                letter-spacing: -0.01em;
+                }
+            
+                #chart .chart-header p {
+                font-size: 0.82rem;
+                color: var(--g-muted);
+                margin: 0;
+                font-family: 'Courier New', monospace;
+                }
+            
+                #chart .toggle-row {
+                display: flex;
+                justify-content: center;
+                gap: 0.6rem;
+                margin-bottom: 1.75rem;
+                }
+            
+                #chart .toggle-row button {
+                padding: 0.45rem 1.4rem;
+                border: 1.5px solid var(--g-border);
+                background: transparent;
+                color: var(--g-muted);
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 0.8rem;
+                font-family: 'Courier New', monospace;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                transition: all 0.25s ease;
+                }
+            
+                #chart .toggle-row button.active {
+                background: var(--g-accent);
+                border-color: var(--g-accent);
+                color: #fff;
+                box-shadow: 0 0 16px rgba(76,175,80,0.35);
+                }
+            
+                #chart .toggle-row button:hover:not(.active) {
+                border-color: var(--g-accent);
+                color: var(--g-light);
+                }
+            
+                #chart .canvas-wrap {
+                position: relative;
+                height: 420px;
+                transition: opacity 0.3s ease;
+                }
+            
+                #chart .canvas-wrap.fading {
+                opacity: 0;
+                }
+            
+                #chart .chart-note {
+                text-align: center;
+                font-size: 0.76rem;
+                font-family: 'Courier New', monospace;
+                color: var(--g-border);
+                margin-top: 1.25rem;
+                letter-spacing: 0.05em;
+                transition: opacity 0.3s ease;
+                }
+            
+                #chart .legend-dots {
+                display: flex;
+                justify-content: center;
+                gap: 1.5rem;
+                margin-bottom: 1.25rem;
+                flex-wrap: wrap;
+                }
+            
+                #chart .legend-dots span {
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+                font-size: 0.78rem;
+                font-family: 'Courier New', monospace;
+                color: var(--g-muted);
+                }
+            
+                #chart .legend-dots i {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-radius: 2px;
+                flex-shrink: 0;
+                }
+            </style>
+            
+            <div class="chart-header">
+                <h3>Media Coverage Analysis</h3>
+                <h2>How Africa's Stories Get Told</h2>
+                <p>Coverage intensity across 20 international outlets · 0–10 scale derived from heatmap data</p>
+            </div>
+            
+            <div class="toggle-row">
+                <button class="active" id="btn-bar">▌▌ Bar Chart</button>
+                <button id="btn-radar">◎ Radar View</button>
+            </div>
+            
+            <div class="legend-dots" id="legend"></div>
+            
+            <div class="canvas-wrap" id="canvasWrap">
+                <canvas id="mediaChart"></canvas>
+            </div>
+            
+            <p class="chart-note" id="chartNote">
+                Hover bars for exact values · Switch views to compare topic balance
+            </p>
+            
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+            <script>
+            (function () {
+                /* ── Data extracted from heatmap ─────────────────────────────── */
+                const outlets = [
+                'NYT','Wash. Post','Al Jazeera','Reuters','Xinhua',
+                'The Guardian','BBC','CNN','Russia Today','AFP',
+                'Deutsche Welle','RFI','CGTN','Bloomberg','Le Monde',
+                'AP','VOA News','The Economist','WSJ','Financial Times'
+                ];
+            
+                const data = {
+                poverty:       [3,1,4,1,1,4,4,2,1,3,4,2,1,1,3,3,4,2,1,2],
+                scitech:       [5,5,4,4,6,5,6,5,5,4,6,4,6,4,4,4,6,7,5,5],
+                entrepreneur:  [0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                };
+            
+                const palette = {
+                poverty:      { fill: 'rgba(165,214,167,0.75)', line: '#a5d6a7', label: 'Poverty' },
+                scitech:      { fill: 'rgba(56,142,60,0.8)',    line: '#388e3c', label: 'Science & Technology' },
+                entrepreneur: { fill: 'rgba(200,230,201,0.6)',  line: '#c8e6c9', label: 'Entrepreneurship & Innovation' },
+                };
+            
+                const avg = arr => +(arr.reduce((a,b) => a+b, 0) / arr.length).toFixed(2);
+            
+                /* ── Build legend ────────────────────────────────────────────── */
+                const legendEl = document.getElementById('legend');
+                Object.values(palette).forEach(p => {
+                const s = document.createElement('span');
+                s.innerHTML = `<i style="background:${p.line}"></i>${p.label}`;
+                legendEl.appendChild(s);
+                });
+            
+                /* ── Chart config builders ───────────────────────────────────── */
+                function barConfig() {
+                return {
+                    type: 'bar',
+                    data: {
+                    labels: outlets,
+                    datasets: [
+                        {
+                        label: palette.poverty.label,
+                        data: data.poverty,
+                        backgroundColor: palette.poverty.fill,
+                        borderColor: palette.poverty.line,
+                        borderWidth: 1.5,
+                        borderRadius: 3,
+                        borderSkipped: false,
+                        },
+                        {
+                        label: palette.scitech.label,
+                        data: data.scitech,
+                        backgroundColor: palette.scitech.fill,
+                        borderColor: palette.scitech.line,
+                        borderWidth: 1.5,
+                        borderRadius: 3,
+                        borderSkipped: false,
+                        },
+                        {
+                        label: palette.entrepreneur.label,
+                        data: data.entrepreneur,
+                        backgroundColor: palette.entrepreneur.fill,
+                        borderColor: palette.entrepreneur.line,
+                        borderWidth: 1.5,
+                        borderRadius: 3,
+                        borderSkipped: false,
+                        },
+                    ]
+                    },
+                    options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 900,
+                        easing: 'easeInOutQuart',
+                        delay: ctx => ctx.dataIndex * 18,
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                        backgroundColor: '#122b16',
+                        borderColor: '#1e4d24',
+                        borderWidth: 1,
+                        titleColor: '#c8e6c9',
+                        bodyColor: '#81c784',
+                        padding: 10,
+                        callbacks: {
+                            label: ctx => ` ${ctx.dataset.label}: ${ctx.raw}/10`,
+                        }
+                        }
+                    },
+                    scales: {
+                        x: {
+                        ticks: {
+                            color: '#4a7c59',
+                            maxRotation: 45,
+                            font: { size: 9.5, family: 'Courier New' },
+                        },
+                        grid: { color: 'rgba(30,77,36,0.25)' },
+                        border: { color: '#1e4d24' },
+                        },
+                        y: {
+                        min: 0, max: 10,
+                        ticks: {
+                            color: '#4a7c59',
+                            stepSize: 2,
+                            font: { size: 10, family: 'Courier New' },
+                        },
+                        grid: { color: 'rgba(30,77,36,0.25)' },
+                        border: { color: '#1e4d24' },
+                        title: {
+                            display: true,
+                            text: 'Coverage Intensity',
+                            color: '#558b2f',
+                            font: { size: 10, family: 'Courier New' },
+                        }
+                        }
+                    }
+                    }
+                };
+                }
+            
+                function radarConfig() {
+                return {
+                    type: 'radar',
+                    data: {
+                    labels: ['Poverty', 'Science &\nTechnology', 'Entrepreneurship\n& Innovation'],
+                    datasets: [
+                        {
+                        label: 'Average across all 20 outlets',
+                        data: [avg(data.poverty), avg(data.scitech), avg(data.entrepreneur)],
+                        backgroundColor: 'rgba(56,142,60,0.2)',
+                        borderColor: '#4caf50',
+                        borderWidth: 2.5,
+                        pointBackgroundColor: '#a5d6a7',
+                        pointBorderColor: '#2e7d32',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 9,
+                        }
+                    ]
+                    },
+                    options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 1000,
+                        easing: 'easeInOutBack',
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                        backgroundColor: '#122b16',
+                        borderColor: '#1e4d24',
+                        borderWidth: 1,
+                        titleColor: '#c8e6c9',
+                        bodyColor: '#81c784',
+                        padding: 10,
+                        callbacks: {
+                            label: ctx => ` Avg intensity: ${ctx.raw}/10`,
+                        }
+                        }
+                    },
+                    scales: {
+                        r: {
+                        min: 0, max: 10,
+                        ticks: {
+                            stepSize: 2,
+                            color: '#4a7c59',
+                            backdropColor: 'transparent',
+                            font: { size: 9, family: 'Courier New' },
+                        },
+                        grid:        { color: 'rgba(30,77,36,0.35)' },
+                        angleLines:  { color: 'rgba(30,77,36,0.5)' },
+                        pointLabels: {
+                            color: '#81c784',
+                            font: { size: 11, family: 'Georgia, serif' },
+                        }
+                        }
+                    }
+                    }
+                };
+                }
+            
+                /* ── Chart lifecycle ─────────────────────────────────────────── */
+                const ctx    = document.getElementById('mediaChart').getContext('2d');
+                const wrap   = document.getElementById('canvasWrap');
+                const note   = document.getElementById('chartNote');
+                const btnBar = document.getElementById('btn-bar');
+                const btnRad = document.getElementById('btn-radar');
+                let chart    = new Chart(ctx, barConfig());
+                let current  = 'bar';
+            
+                function switchChart(type) {
+                if (type === current) return;
+                current = type;
+            
+                wrap.classList.add('fading');
+            
+                setTimeout(() => {
+                    chart.destroy();
+                    chart = new Chart(ctx, type === 'bar' ? barConfig() : radarConfig());
+            
+                    note.textContent = type === 'bar'
+                    ? 'Hover bars for exact values · Switch views to compare topic balance'
+                    : 'Radar shows average coverage across all 20 outlets — notice how Entrepreneurship barely registers';
+            
+                    btnBar.classList.toggle('active', type === 'bar');
+                    btnRad.classList.toggle('active', type === 'radar');
+                    wrap.classList.remove('fading');
+                }, 280);
+                }
+            
+                btnBar.addEventListener('click', () => switchChart('bar'));
+                btnRad.addEventListener('click', () => switchChart('radar'));
+            })();
+            </script>
+            
+        </div>
+        
+        <!--<p>the negative portrayal of Africa by the American [and
+            European] media is a deliberate and systematic process that is created and sustained by the
+            bias in the way American [and European] media select foreign news stories.
+        </p> -->
     </div>
-    <div class="section">
+    <div class="section"> <!-- Seventh Section -->
         <h2>My views</h2>
-        <p> My perspective></p>
+        <p>The lack of balanced reporting blocks out success stories, such as Africa’s
+             booming tech sector, the rise of sustainable energy initiatives, and vibrant
+              entrepreneurial ecosystems (Fray Intermedia) leads sway to the notion of an 
+              undeveloped continent. To counter this we need action</p>
     </div>
-    <div class="section">
-        <h2>Video<\h2>
+    <div class="section">  <!-- Eight Section -->
+        <p>Equal representation in media with use of inclusive and unbiased language to make a level playing field and help
+            abolish harmful stereotypes
+        </p>
     </div>
-    <div class="section">
-        <p> Different perspectives</p>
+    <div class="section">  <!--Ninth Section -->
+        <h2>Different perspectives</h2>
+        <p>Some people state that representation is already rising so why should we solve something thats already being solved?
+            They view the problem as non-existant thus not of major concern.
+        </p>
     </div>
-    <div class="section"></div>
-    <div class="section"></div>
-    
-
-    
-    <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div class="section">  <!--Tenth Section -->
+        <h2>Final section</h2>
+        <p>Check out my website: <www class="tenacity ct ws"></www>
+    </div>
+   <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
