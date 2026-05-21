@@ -4,10 +4,21 @@ body{
   align-items: center;
   margin: 0;
   padding: 0;
-  background-color: #afafaf;
   overflow-x: hidden;
   overflow-y:scroll;
   height: auto; 
+  cursor: none;
+}
+
+.custom-dot-cursor {
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Prevents the dot from blocking clicks */
+  z-index: 9999;
 }
 
 p,h1,h2,h3 {
@@ -36,6 +47,7 @@ h2, h1{
   z-index: -2;
   background-color: #4b364b;
   overflow: hidden;
+  cursor: url("/static/img/aperture-svgrepo-com.svg"), auto;
 }
  
 .blob {
@@ -278,6 +290,7 @@ h2, h1{
   width: 100vw;
   height: 80vh;
   background-color: #00cba9;
+  border-bottom: 10px solid #00cba9;
 }
 
 #seventh-L, #seventh-R{
