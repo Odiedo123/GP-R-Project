@@ -19,15 +19,15 @@ p{
 }
 
 h1{
-  font-size: 4em;
+  font-size: 3.7em;
 }
 
 h2{
   font-size: 1.6em;
 }
 
-h1.h2{
-  font-family: "Roboto", sans-serif;
+h2, h1{
+  font-family: "Lato", sans-serif;
 }
 
 .blob-bg {
@@ -129,6 +129,7 @@ h1.h2{
   background-color: orange;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   white-space: nowrap;
+  padding: 2px;
 }
 
 #threejs-model {
@@ -235,3 +236,37 @@ h1.h2{
 .sixth-panel--left  { transform: translateX(-120vw); }
 .sixth-panel--right { transform: translateX( 120vw); }
 .sixth-panel--entered { transform: translateX(0); }
+
+#seventh-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#seventh-L, #seventh-R{
+  width: 50%;
+  height: 100%;
+  border: 3px solid red;
+}
+
+#seventh-L{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#seventh-L div{
+  height: 150px;
+  margin: 10px;
+  width: 400px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 3px solid purple;
+  cursor: pointer;
+}
+
+.chosen{
+  background-color: red;
+}
