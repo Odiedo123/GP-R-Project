@@ -11,10 +11,10 @@ body{
 }
 
 .custom-dot-cursor {
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
   background: #000;
-  border-radius: 50%;
+  border-radius: 10px;
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none; /* Prevents the dot from blocking clicks */
@@ -229,6 +229,8 @@ h2, h1{
   height: fit-content;
   overflow: hidden;
   background-color: white;
+  /* Prevents any accidental paint flashing in some browsers */
+  position: relative; 
 }
 
 .logos {
@@ -236,21 +238,31 @@ h2, h1{
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: slide 10s linear infinite;
+  
+  /* 1. Added hardware acceleration */
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  
+  /* 2. Increased duration slightly (optional, but slower looks smoother) */
+  animation: slide 15s linear infinite;
 }
 
 .logos img {
   width: 100px;
   margin: 0 25px;
+  
+  /* 3. Prevents image blurry/jittery scaling artifacts */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 @keyframes slide {
   from {
-    transform: translateX(0);
+    /* 4. Swapped to translate3d for GPU rendering throughout the animation */
+    transform: translate3d(0, 0, 0);
   }
-
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
