@@ -147,6 +147,7 @@ h2, h1{
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 15vh;
 }
 
 #quote-section div{
@@ -195,6 +196,7 @@ h2, h1{
 #third-section{
   justify-content: center;
   flex-direction: row;
+  margin-top: 0;
 }
 
 #third-section div{
@@ -209,6 +211,37 @@ h2, h1{
 #third-section div p{
   font-size: 1.4em;
 }
+
+.slider {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  background-color: white;
+}
+
+.logos {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slide 10s linear infinite;
+}
+
+.logos img {
+  width: 100px;
+  margin: 0 25px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 
 [id="4L"],
 [id="4R"] {
@@ -257,6 +290,7 @@ h2, h1{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: none;
 }
 
 #seventh-L div{
