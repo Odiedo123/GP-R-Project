@@ -4,7 +4,7 @@ body{
   align-items: center;
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-color: #afafaf;
   overflow-x: hidden;
   overflow-y:scroll;
   height: auto; 
@@ -34,7 +34,7 @@ h2, h1{
   position: fixed;
   inset: 0;
   z-index: -2;
-  background: #000;
+  background-color: #4b364b;
   overflow: hidden;
 }
  
@@ -114,7 +114,6 @@ h2, h1{
   height: 90vh;
   margin-top: 15vh;
   overflow: hidden;
-  border: 3px solid green;
 }
 
 #first{
@@ -242,12 +241,15 @@ h2, h1{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 0;
+  width: 100vw;
+  height: 80vh;
+  background-color: #00cba9;
 }
 
 #seventh-L, #seventh-R{
   width: 50%;
   height: 100%;
-  border: 3px solid red;
 }
 
 #seventh-L{
@@ -269,4 +271,8 @@ h2, h1{
 
 .chosen{
   background-color: red;
+}
+
+.flip-svg {
+  transform: scaleY(-1);
 }

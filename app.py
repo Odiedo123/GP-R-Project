@@ -1,6 +1,6 @@
 import os
-from flask import Flask, render_template, request
-from dotenv import load_dotenv
+from flask import Flask, render_template, request # type: ignore
+from dotenv import load_dotenv # type: ignore
 
 
 load_dotenv("keys.env")
