@@ -11,13 +11,15 @@ body{
 }
 
 .custom-dot-cursor {
-  width: 20px;
-  height: 20px;
-  background: #000;
+  width: 40px;
+  height: 40px;
+  background: rgba(198, 219, 5, 0.352);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
   border-radius: 10px;
   position: fixed;
   transform: translate(-50%, -50%);
-  pointer-events: none; /* Prevents the dot from blocking clicks */
+  pointer-events: none;
   z-index: 9999;
 }
 
@@ -128,20 +130,49 @@ h2, h1{
   overflow: hidden;
 }
 
+#nav-bar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  border: 3px solid red;
+}
+
+#nav-bar h2{
+  font-family: "Lobster", Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  font-size: 2em;
+  margin-left: 40px;
+}
+
+#rest{
+  margin-left: 100px;
+}
+
 #first{
   width: 100vw;
   background: rgba(0, 168, 101, 0.352);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  margin-top: 5vh;
+  margin-top: 0;
 }
 
 #highlighter{
-  background-color: orange;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   white-space: nowrap;
   padding: 2px;
 }
+
+.red{
+  background-color: red;
+}
+
+.orange{
+  background-color: orange;
+}
+
+
 
 #threejs-model {
   width: 1000px;    
@@ -278,7 +309,18 @@ h2, h1{
 [id="4L"].slide-out-left  { transform: translateX(-120vw); }
 [id="4R"].slide-out-right { transform: translateX( 120vw); }
 
+[id="4L"]{
+  font-size: 1.3em;
+}
+
 /* ── Sixth-section panels (injected by JS) ─────────────────────── */
+
+#sixth-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sixth-panel {
   flex: 1;
   padding: 2rem;
@@ -302,8 +344,67 @@ h2, h1{
   width: 100vw;
   height: 80vh;
   background-color: #00cba9;
-  border-bottom: 10px solid #00cba9;
+  border: none;
+  border: 10px solid #00cba9;
 }
+
+.glow-effect {
+  margin-top: 5vh;
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.glow-effect::after,
+.glow-effect::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 50%,
+    #ff923f,
+    #ff6f00
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  padding: 4px;
+  border-radius: 10px;
+  animation: 2s spin linear infinite;
+}
+
+.glow-effect::before {
+  filter: blur(1.5rem);
+  opacity: 1;
+}
+
+@keyframes spin {
+  from { --angle: 0deg; }
+  to   { --angle: 360deg; }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.glow-effect:focus-within::after {
+  opacity: 1;
+}
+
 
 #seventh-L, #seventh-R{
   width: 50%;
@@ -318,13 +419,13 @@ h2, h1{
   border: none;
 }
 
-#seventh-L div{
-  height: 150px;
+#seventh-L .glow-effect div{
+  background-color: black;
+  height: 120px;
   margin: 10px;
   width: 400px;
   padding: 10px;
   border-radius: 15px;
-  border: 3px solid purple;
   cursor: pointer;
 }
 

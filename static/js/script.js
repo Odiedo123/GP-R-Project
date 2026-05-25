@@ -121,8 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
   sixthChildren.forEach((el, i) =>
     (i % 2 === 0 ? leftPanel : rightPanel).appendChild(el)
   );
-  sixthSection.style.flexDirection = 'row';
   sixthSection.style.alignItems    = 'center';
+  sixthSection.style.JustifyContent  = 'center';
   sixthSection.appendChild(leftPanel);
   sixthSection.appendChild(rightPanel);
 
