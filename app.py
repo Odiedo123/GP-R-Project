@@ -12,5 +12,9 @@ app.secret_key = os.getenv('FLASK_SECRET_KEY')
 def home_page():
     return render_template('index.html')
 
+@app.route("/about")
+def about_page():
+    return render_template('about.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

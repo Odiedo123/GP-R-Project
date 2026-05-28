@@ -11,9 +11,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Google+sans|Lobster|Roboto"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
     <script type="importmap">
         {
         "imports": {
@@ -54,7 +54,8 @@
         <h1>How are Africans Represented In Global Media?</h1>
         <div id="threejs-model"></div>
     </div>
-    <div class="section" id="quote-section">            <!--Second section-->
+    <div class="section" id="quote-section">   
+        <h3 id="name">≋James Baldwin<br> (Antony Barboza | Getty Images)</h3>         <!--Second section-->
         <div>                                                                            
             <p>It is a peculiar triumph of society that it is able to<br>
                 status of the reality of this decree; It has the<br>
@@ -135,15 +136,15 @@
     </div>
     <div class="section">   <!--Fourth Section -->
         <h2>Video</h2>
-        <iframe width="1120"
-         height="630"
-          src="https://www.youtube.com/embed/bAwQLsVXYVo?si=3trNK7-mJ1FXcLUd" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-
-        </iframe>
+    <iframe 
+        width="1120" 
+        height="630" 
+        src="https://www.youtube.com/embed/C_9Q9XELpYI?si=1x250xmkWH6Hnmhp" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
     </div>
     <div class="section"> <!--Fifth Section -->
         <div id="4L">
@@ -154,396 +155,19 @@
             </p>
         </div>
         <div id="4R">
-            <p>Placeholder text
+            <dotlottie-wc
+                src="https://lottie.host/570b96d0-4a82-4502-ac5b-4ed1ca9cbaea/LSbYY2OkCb.lottie"
+                style="width: 650px;height: 650px"
+                autoplay
+                loop
+            ></dotlottie-wc>
 
         </div>
     </div>
     <div class="section">  <!-- Sixth Section -->
-        <div id="chart">
-            <style>
-                /* All styles scoped to #chart so nothing bleeds into your page */
-                #chart {
-                --g-dark:   #0a1a0d;
-                --g-mid:    #122b16;
-                --g-border: #1e4d24;
-                --g-accent: #4caf50;
-                --g-light:  #81c784;
-                --g-pale:   #c8e6c9;
-                --g-text:   #dcedc8;
-                --g-muted:  #558b2f;
-            
-                font-family: 'Georgia', serif;
-                background: var(--g-dark);
-                border: 1px solid var(--g-border);
-                border-radius: 20px;
-                padding: 2.5rem 2.5rem 2.5rem ;
-                max-width: 920px;
-                margin: 2rem auto;
-                box-shadow: 0 8px 48px rgba(0,0,0,0.5), inset 0 1px 0 rgba(76,175,80,0.15);
-                position: relative;
-                overflow: hidden;
-                }
-            
-                /* Subtle grid texture */
-                #chart::before {
-                content: '';
-                position: absolute;
-                inset: 0;
-                background-image:
-                    linear-gradient(rgba(76,175,80,0.03) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(76,175,80,0.03) 1px, transparent 1px);
-                background-size: 32px 32px;
-                pointer-events: none;
-                }
-            
-                #chart .chart-header {
-                text-align: center;
-                margin-bottom: 1.75rem;
-                position: relative;
-                }
-            
-                #chart .chart-header h3 {
-                font-size: 1.05rem;
-                font-family: 'Courier New', monospace;
-                letter-spacing: 0.18em;
-                text-transform: uppercase;
-                color: var(--g-muted);
-                margin: 0 0 0.35rem;
-                font-weight: normal;
-                }
-            
-                #chart .chart-header h2 {
-                font-size: 1.6rem;
-                color: var(--g-text);
-                margin: 0 0 0.6rem;
-                font-weight: normal;
-                letter-spacing: -0.01em;
-                }
-            
-                #chart .chart-header p {
-                font-size: 0.82rem;
-                color: var(--g-muted);
-                margin: 0;
-                font-family: 'Courier New', monospace;
-                }
-            
-                #chart .toggle-row {
-                display: flex;
-                justify-content: center;
-                gap: 0.6rem;
-                margin-bottom: 1.75rem;
-                }
-            
-                #chart .toggle-row button {
-                padding: 0.45rem 1.4rem;
-                border: 1.5px solid var(--g-border);
-                background: transparent;
-                color: var(--g-muted);
-                border-radius: 4px;
-                cursor: pointer;
-                font-size: 0.8rem;
-                font-family: 'Courier New', monospace;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
-                transition: all 0.25s ease;
-                }
-            
-                #chart .toggle-row button.active {
-                background: var(--g-accent);
-                border-color: var(--g-accent);
-                color: #fff;
-                box-shadow: 0 0 16px rgba(76,175,80,0.35);
-                }
-            
-                #chart .toggle-row button:hover:not(.active) {
-                border-color: var(--g-accent);
-                color: var(--g-light);
-                }
-            
-                #chart .canvas-wrap {
-                position: relative;
-                height: 420px;
-                transition: opacity 0.3s ease;
-                }
-            
-                #chart .canvas-wrap.fading {
-                opacity: 0;
-                }
-            
-                #chart .chart-note {
-                text-align: center;
-                font-size: 0.76rem;
-                font-family: 'Courier New', monospace;
-                color: var(--g-border);
-                margin-top: 1.25rem;
-                letter-spacing: 0.05em;
-                transition: opacity 0.3s ease;
-                }
-            
-                #chart .legend-dots {
-                display: flex;
-                justify-content: center;
-                gap: 1.5rem;
-                margin-bottom: 1.25rem;
-                flex-wrap: wrap;
-                }
-            
-                #chart .legend-dots span {
-                display: flex;
-                align-items: center;
-                gap: 0.4rem;
-                font-size: 0.78rem;
-                font-family: 'Courier New', monospace;
-                color: var(--g-muted);
-                }
-            
-                #chart .legend-dots i {
-                display: inline-block;
-                width: 10px;
-                height: 10px;
-                border-radius: 2px;
-                flex-shrink: 0;
-                }
-            </style>
-            <div class="chart-header">
-                <h3>Media Coverage Analysis</h3>
-                <h2>How Africa's Stories Get Told</h2>
-                <p>Coverage intensity across 20 international outlets · 0–10 scale derived from heatmap data</p>
-            </div>
-            <div class="toggle-row">
-                <button class="active" id="btn-bar">▌▌ Bar Chart</button>
-                <button id="btn-radar">◎ Radar View</button>
-            </div>
-            <div class="legend-dots" id="legend"></div>
-            <div class="canvas-wrap" id="canvasWrap">
-                <canvas id="mediaChart"></canvas>
-            </div>
-            <p class="chart-note" id="chartNote">
-                Hover bars for exact values · Switch views to compare topic balance
-            </p>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-            <script>
-            (function () {
-                /* ── Data extracted from heatmap ─────────────────────────────── */
-                const outlets = [
-                'NYT','Wash. Post','Al Jazeera','Reuters','Xinhua',
-                'The Guardian','BBC','CNN','Russia Today','AFP',
-                'Deutsche Welle','RFI','CGTN','Bloomberg','Le Monde',
-                'AP','VOA News','The Economist','WSJ','Financial Times'
-                ];
-            
-                const data = {
-                poverty:       [3,1,4,1,1,4,4,2,1,3,4,2,1,1,3,3,4,2,1,2],
-                scitech:       [5,5,4,4,6,5,6,5,5,4,6,4,6,4,4,4,6,7,5,5],
-                entrepreneur:  [0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                };
-            
-                const palette = {
-                poverty:      { fill: 'rgba(165,214,167,0.75)', line: '#a5d6a7', label: 'Poverty' },
-                scitech:      { fill: 'rgba(56,142,60,0.8)',    line: '#388e3c', label: 'Science & Technology' },
-                entrepreneur: { fill: 'rgba(200,230,201,0.6)',  line: '#c8e6c9', label: 'Entrepreneurship & Innovation' },
-                };
-            
-                const avg = arr => +(arr.reduce((a,b) => a+b, 0) / arr.length).toFixed(2);
-            
-                /* ── Build legend ────────────────────────────────────────────── */
-                const legendEl = document.getElementById('legend');
-                Object.values(palette).forEach(p => {
-                const s = document.createElement('span');
-                s.innerHTML = `<i style="background:${p.line}"></i>${p.label}`;
-                legendEl.appendChild(s);
-                });
-            
-                /* ── Chart config builders ───────────────────────────────────── */
-                function barConfig() {
-                return {
-                    type: 'bar',
-                    data: {
-                    labels: outlets,
-                    datasets: [
-                        {
-                        label: palette.poverty.label,
-                        data: data.poverty,
-                        backgroundColor: palette.poverty.fill,
-                        borderColor: palette.poverty.line,
-                        borderWidth: 1.5,
-                        borderRadius: 3,
-                        borderSkipped: false,
-                        },
-                        {
-                        label: palette.scitech.label,
-                        data: data.scitech,
-                        backgroundColor: palette.scitech.fill,
-                        borderColor: palette.scitech.line,
-                        borderWidth: 1.5,
-                        borderRadius: 3,
-                        borderSkipped: false,
-                        },
-                        {
-                        label: palette.entrepreneur.label,
-                        data: data.entrepreneur,
-                        backgroundColor: palette.entrepreneur.fill,
-                        borderColor: palette.entrepreneur.line,
-                        borderWidth: 1.5,
-                        borderRadius: 3,
-                        borderSkipped: false,
-                        },
-                    ]
-                    },
-                    options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    animation: {
-                        duration: 900,
-                        easing: 'easeInOutQuart',
-                        delay: ctx => ctx.dataIndex * 18,
-                    },
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                        backgroundColor: '#122b16',
-                        borderColor: '#1e4d24',
-                        borderWidth: 1,
-                        titleColor: '#c8e6c9',
-                        bodyColor: '#81c784',
-                        padding: 10,
-                        callbacks: {
-                            label: ctx => ` ${ctx.dataset.label}: ${ctx.raw}/10`,
-                        }
-                        }
-                    },
-                    scales: {
-                        x: {
-                        ticks: {
-                            color: '#4a7c59',
-                            maxRotation: 45,
-                            font: { size: 9.5, family: 'Courier New' },
-                        },
-                        grid: { color: 'rgba(30,77,36,0.25)' },
-                        border: { color: '#1e4d24' },
-                        },
-                        y: {
-                        min: 0, max: 10,
-                        ticks: {
-                            color: '#4a7c59',
-                            stepSize: 2,
-                            font: { size: 10, family: 'Courier New' },
-                        },
-                        grid: { color: 'rgba(30,77,36,0.25)' },
-                        border: { color: '#1e4d24' },
-                        title: {
-                            display: true,
-                            text: 'Coverage Intensity',
-                            color: '#558b2f',
-                            font: { size: 10, family: 'Courier New' },
-                        }
-                        }
-                    }
-                    }
-                };
-                }
-            
-                function radarConfig() {
-                return {
-                    type: 'radar',
-                    data: {
-                    labels: ['Poverty', 'Science &\nTechnology', 'Entrepreneurship\n& Innovation'],
-                    datasets: [
-                        {
-                        label: 'Average across all 20 outlets',
-                        data: [avg(data.poverty), avg(data.scitech), avg(data.entrepreneur)],
-                        backgroundColor: 'rgba(56,142,60,0.2)',
-                        borderColor: '#4caf50',
-                        borderWidth: 2.5,
-                        pointBackgroundColor: '#a5d6a7',
-                        pointBorderColor: '#2e7d32',
-                        pointBorderWidth: 2,
-                        pointRadius: 6,
-                        pointHoverRadius: 9,
-                        }
-                    ]
-                    },
-                    options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    animation: {
-                        duration: 1000,
-                        easing: 'easeInOutBack',
-                    },
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                        backgroundColor: '#122b16',
-                        borderColor: '#1e4d24',
-                        borderWidth: 1,
-                        titleColor: '#c8e6c9',
-                        bodyColor: '#81c784',
-                        padding: 10,
-                        callbacks: {
-                            label: ctx => ` Avg intensity: ${ctx.raw}/10`,
-                        }
-                        }
-                    },
-                    scales: {
-                        r: {
-                        min: 0, max: 10,
-                        ticks: {
-                            stepSize: 2,
-                            color: '#4a7c59',
-                            backdropColor: 'transparent',
-                            font: { size: 9, family: 'Courier New' },
-                        },
-                        grid:        { color: 'rgba(30,77,36,0.35)' },
-                        angleLines:  { color: 'rgba(30,77,36,0.5)' },
-                        pointLabels: {
-                            color: '#81c784',
-                            font: { size: 11, family: 'Georgia, serif' },
-                        }
-                        }
-                    }
-                    }
-                };
-                }
-            
-                /* ── Chart lifecycle ─────────────────────────────────────────── */
-                const ctx    = document.getElementById('mediaChart').getContext('2d');
-                const wrap   = document.getElementById('canvasWrap');
-                const note   = document.getElementById('chartNote');
-                const btnBar = document.getElementById('btn-bar');
-                const btnRad = document.getElementById('btn-radar');
-                let chart    = new Chart(ctx, barConfig());
-                let current  = 'bar';
-            
-                function switchChart(type) {
-                if (type === current) return;
-                current = type;
-            
-                wrap.classList.add('fading');
-            
-                setTimeout(() => {
-                    chart.destroy();
-                    chart = new Chart(ctx, type === 'bar' ? barConfig() : radarConfig());
-            
-                    note.textContent = type === 'bar'
-                    ? 'Hover bars for exact values · Switch views to compare topic balance'
-                    : 'Radar shows average coverage across all 20 outlets — notice how Entrepreneurship barely registers';
-            
-                    btnBar.classList.toggle('active', type === 'bar');
-                    btnRad.classList.toggle('active', type === 'radar');
-                    wrap.classList.remove('fading');
-                }, 280);
-                }
-            
-                btnBar.addEventListener('click', () => switchChart('bar'));
-                btnRad.addEventListener('click', () => switchChart('radar'));
-            })();
-            </script>
+        <div>
+            <img width="850px" height="auto" border-radius="10px" src="{{url_for('static', filename='img/graph.png')}}" />
         </div>
-        
-        <!--<p>the negative portrayal of Africa by the American [and
-            European] media is a deliberate and systematic process that is created and sustained by the
-            bias in the way American [and European] media select foreign news stories.
-        </p> -->
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00cba9" fill-opacity="1" d="M0,224L26.7,229.3C53.3,235,107,245,160,234.7C213.3,224,267,192,320,197.3C373.3,203,427,245,480,261.3C533.3,277,587,267,640,261.3C693.3,256,747,256,800,250.7C853.3,245,907,235,960,192C1013.3,149,1067,75,1120,74.7C1173.3,75,1227,149,1280,192C1333.3,235,1387,245,1413,250.7L1440,256L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
     <div class="section" id="seventh-section">
@@ -565,10 +189,13 @@
             </div>
         </div>
         <div id="seventh-R">
+            <h2>What needs to Change?</h2>
             <div>
-                <p>To change a collective effort is needed. Inclusion blah blah blah;
-                    Great text amazing paragrapg more amazing sentences applaues
-                    Wooj yeah im tires.
+                <p>These harmful stereotypes are constantly perpetuated by Western Media but what should we do to change, including 
+                    you? We'll firstly I belive the use of Inclusive language and unbiased narratives focusing on the bulk
+                    of achievements and improvements being achieved by the continent is the first necessary step.Intentional and
+                    focused effort is needed.Moreover, provision of equal opportunities is a key step to a global world, where you and me 
+                    can enjoy equal benefits and finally achieve and follow our dreams.
                 </p>
             </div>
         </div>

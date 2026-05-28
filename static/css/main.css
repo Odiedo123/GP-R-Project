@@ -11,16 +11,43 @@ body{
 }
 
 .custom-dot-cursor {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background: rgba(198, 219, 5, 0.352);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(10px) saturate(180%);
-  border-radius: 10px;
+  border-radius: 50%; 
   position: fixed;
-  transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
+  animation: quantum-vibrate 5s infinite linear;
+}
+
+@keyframes quantum-vibrate {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 50% 45% 52% 48%;
+  }
+  20% {
+    transform: translate(-52%, -47%) scale(0.98);
+    border-radius: 48% 52% 45% 55%;
+  }
+  40% {
+    transform: translate(-47%, -53%) scale(1.02);
+    border-radius: 52% 48% 50% 45%;
+  }
+  60% {
+    transform: translate(-53%, -49%) scale(0.95);
+    border-radius: 45% 55% 48% 52%;
+  }
+  80% {
+    transform: translate(-48%, -51%) scale(1.05);
+    border-radius: 50% 45% 55% 48%;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 50% 45% 52% 48%;
+  }
 }
 
 p,h1,h2,h3 {
@@ -136,7 +163,6 @@ h2, h1{
   align-items: center;
   width: 100vw;
   height: 10vh;
-  border: 3px solid red;
 }
 
 #nav-bar h2{
@@ -147,9 +173,37 @@ h2, h1{
 }
 
 #rest{
-  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: flex-end;
+  margin-left: 50%;
+  height: 100%;
 }
 
+#rest h3{
+  margin: 5vh;
+  cursor: pointer; 
+  font-family: "Oswald", sans-serif;
+}
+
+#rest h3 {
+  border-bottom: 3px solid transparent; 
+  transition: border-bottom 3s; 
+}
+
+#rest h3:hover {
+  animation: hover-link 0.3s forwards; /* Added 'forwards' here */
+}
+
+@keyframes hover-link {
+  from {
+    border-bottom: 3px solid white;
+  }
+  to {
+    border-bottom: 3px solid rgb(0, 255, 242);
+  }
+}
 #first{
   width: 100vw;
   background: rgba(0, 168, 101, 0.352);
@@ -181,6 +235,7 @@ h2, h1{
 }
 
 #quote-section{
+  position: relative;
   width: 98vw; 
   justify-content: center;
   flex-direction: row;
@@ -217,6 +272,13 @@ h2, h1{
   margin-top: 100px;
   height: 600px;
   width: auto;
+}
+
+#name{
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  font-family:"Oswald", sans-serif ;
 }
 
 #R{
@@ -313,6 +375,13 @@ h2, h1{
   font-size: 1.3em;
 }
 
+[id="4R"]{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  font-size: 1.3em;
+}
+
 /* ── Sixth-section panels (injected by JS) ─────────────────────── */
 
 #sixth-section{
@@ -355,6 +424,13 @@ h2, h1{
   isolation: isolate;
   display: inline-block;
   border-radius: 10px;
+}
+
+.glow-effect div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -431,6 +507,28 @@ h2, h1{
 
 .chosen{
   background-color: red;
+}
+
+#seventh-R{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -50px;
+}
+
+#seventh-R h2{
+  justify-self: center;
+  align-self: center;
+}
+
+#seventh-R div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#seventh-R div p{
+  font-size: 1.3em;
 }
 
 .flip-svg {

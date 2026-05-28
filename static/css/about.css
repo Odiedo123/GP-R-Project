@@ -1,0 +1,24 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y:scroll;
+  height: auto; 
+  cursor: none;
+}
+
+.custom-dot-cursor {
+  width: 40px;
+  height: 40px;
+  background: rgba(198, 219, 5, 0.352);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border-radius: 10px;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}
