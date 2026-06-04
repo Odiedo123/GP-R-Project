@@ -181,18 +181,20 @@ h2, h1{
   height: 100%;
 }
 
-#rest h3{
+#rest a{
+  color: white;
+  font-size: 1.3em;
   margin: 5vh;
   cursor: pointer; 
   font-family: "Oswald", sans-serif;
 }
 
-#rest h3 {
+#rest a {
   border-bottom: 3px solid transparent; 
   transition: border-bottom 3s; 
 }
 
-#rest h3:hover {
+#rest a:hover {
   animation: hover-link 0.3s forwards; /* Added 'forwards' here */
 }
 
@@ -382,7 +384,6 @@ h2, h1{
   font-size: 1.3em;
 }
 
-/* ── Sixth-section panels (injected by JS) ─────────────────────── */
 
 #sixth-section{
   display: flex;
@@ -533,4 +534,157 @@ h2, h1{
 
 .flip-svg {
   transform: scaleY(-1);
+}
+
+
+.section-8th{
+  margin-top: 20vh;
+  height: auto;
+}
+
+#faq{
+  width: 90vw;
+}
+
+.faq-item {
+  border-bottom: 0.5px solid #e5e7eb; 
+}
+
+.faq-item:first-child { 
+  border-top: 0.5px solid #e5e7eb; 
+}
+
+.faq-btn {
+  color: whitesmoke;
+  width: 100%; 
+  background: none; 
+  border: none; 
+  cursor: pointer;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 12px;
+  padding: 1rem 0; 
+  text-align: left; 
+  font-size: 25px; 
+  font-weight: 500;
+}
+
+.faq-icon { 
+  transition: transform 0.25s ease; 
+}
+
+.faq-item.open .faq-icon { 
+  transform: rotate(180deg); 
+}
+
+.faq-body { 
+  overflow: hidden; 
+  max-height: 0; 
+  transition: max-height 0.3s ease; 
+}
+
+.faq-body p { 
+  margin: 0 0 1rem; 
+  font-size: 14px; 
+  line-height: 1.7; 
+  color: white; 
+}
+
+.custom-footer {
+  margin-top: 20vh;
+  height: 45vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0a0a0a;
+  color: white;
+  padding: 40px 80px;
+  gap: 40px;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  height: 45px;
+  object-fit: contain;
+}
+
+.footer-divider {
+  width: 2px;
+  height: 250px;
+  background: linear-gradient(to bottom, #4ee1ec, #2104e0);
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.footer-right h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-family: "Inter", sans-serif;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 250px;
+  height: 50px;
+}
+
+#news-button {
+  width: 100px;
+  margin-top: 0;
+}
+
+#email {
+  margin-top: 20px;
+  color: #b3bacc;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#socials {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+#socials div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background-color: grey;
+  cursor: pointer;
+}
+
+#socials div img {
+  height: 30px;
+  width: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

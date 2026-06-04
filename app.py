@@ -16,5 +16,13 @@ def home_page():
 def about_page():
     return render_template('about.html')
 
+@app.route("/africa")
+def africa_page():
+    return render_template('africa.html')
+
+@app.route("/connect")
+def connect_page():
+    return render_template('connect.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

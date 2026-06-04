@@ -255,3 +255,23 @@ window.addEventListener('mousemove', (e) => {
   cursorDot.style.left = e.clientX + 'px';
   cursorDot.style.top = e.clientY + 'px';
 });
+
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const body = item.querySelector('.faq-body');
+            const isOpen = item.classList.contains('open');
+
+            // close all
+            document.querySelectorAll('.faq-item.open').forEach(x => {
+            x.classList.remove('open');
+            x.querySelector('.faq-body').style.maxHeight = '0';
+            });
+
+            // open clicked one if it was closed
+            if (!isOpen) {
+            item.classList.add('open');
+            body.style.maxHeight = body.scrollHeight + 'px';
+            }
+        });
+        });
