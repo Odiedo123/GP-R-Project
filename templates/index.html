@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Google+sans|Lobster|Roboto"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
@@ -102,6 +103,30 @@
                 Is African representation in Western media is biased? How many times have we heard of Wars? Poverty? What about Technology?
                 Why does the last one stand out? Why does media focus on the negative and what are its devasting effects on the African Population?
             </p>
+            <button class="connect" onclick="window.location.href='/connect';">
+                Connect
+                <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                    d="M4 12H20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                />
+                <path
+                    d="M14 6L20 12L14 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                </svg>
+            </button>
         </div>
         <div>
             <dotlottie-wc
@@ -135,16 +160,16 @@
         </div>
     </div>
     <div class="section">   <!--Fourth Section -->
-        <h2>Video</h2>
-    <iframe 
-        width="1120" 
-        height="630" 
-        src="https://www.youtube.com/embed/C_9Q9XELpYI?si=1x250xmkWH6Hnmhp" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-    </iframe>
+        <h2>What are the Effects?</h2>
+            <iframe 
+                width="1120" 
+                height="630" 
+                src="https://www.youtube.com/embed/C_9Q9XELpYI?si=1x250xmkWH6Hnmhp" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
     </div>
     <div class="section"> <!--Fifth Section -->
         <div id="4L">
@@ -153,6 +178,30 @@
                 giving rise to stereotypes and biases such as the <span id="highlighter" class="red">"dark"</span> nation, <span id="highlighter" class="red">"primitive"</span> continent and that Africa is a <span id="highlighter" class="red">"lost cause"</span>.
                 Estimates say Africa loses around <span id="highlighter" class="orange">£3.2bn</span> yearly in inflated interest payments due to persistent negative stereotypes.
             </p>
+            <button class="connect" onclick="window.location.href='/connect';">
+                Connect
+                <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                    d="M4 12H20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                />
+                <path
+                    d="M14 6L20 12L14 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                </svg>
+            </button>
         </div>
         <div id="4R">
             <dotlottie-wc
@@ -161,16 +210,17 @@
                 autoplay
                 loop
             ></dotlottie-wc>
-
         </div>
     </div>
-    <div class="section">  <!-- Sixth Section -->
+    <div class="section" id="sixth-section">  <!-- Sixth Section -->
         <div>
-            <img width="auto" height="auto" src="{{url_for('static', filename='img/image.png')}}" />
+            <img width="auto" height="800px" src="{{url_for('static', filename='img/image.png')}}" />
+        </div>
+        <div>
             <p>*Notice how empty education and technology is*</p>
         </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00cba9" fill-opacity="1" d="M0,224L26.7,229.3C53.3,235,107,245,160,234.7C213.3,224,267,192,320,197.3C373.3,203,427,245,480,261.3C533.3,277,587,267,640,261.3C693.3,256,747,256,800,250.7C853.3,245,907,235,960,192C1013.3,149,1067,75,1120,74.7C1173.3,75,1227,149,1280,192C1333.3,235,1387,245,1413,250.7L1440,256L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+    <svg id="top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00cba9" fill-opacity="1" d="M0,224L26.7,229.3C53.3,235,107,245,160,234.7C213.3,224,267,192,320,197.3C373.3,203,427,245,480,261.3C533.3,277,587,267,640,261.3C693.3,256,747,256,800,250.7C853.3,245,907,235,960,192C1013.3,149,1067,75,1120,74.7C1173.3,75,1227,149,1280,192C1333.3,235,1387,245,1413,250.7L1440,256L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
     <div class="section" id="seventh-section">
         <div id="seventh-L">
             <div class="glow-effect">
@@ -190,15 +240,6 @@
             </div>
         </div>
         <div id="seventh-R">
-            <h2>What needs to Change?</h2>
-            <div>
-                <p>These harmful stereotypes are constantly perpetuated by Western Media but what should we do to change, including 
-                    you? We'll firstly I belive the use of Inclusive language and unbiased narratives focusing on the bulk
-                    of achievements and improvements being achieved by the continent is the first necessary step.Intentional and
-                    focused effort is needed.Moreover, provision of equal opportunities is a key step to a global world, where you and me 
-                    can enjoy equal benefits and finally achieve and follow our dreams.
-                </p>
-            </div>
         </div>
     </div>
     <svg class="flip-svg" style="margin-bottom: -100px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00cba9"  fill-opacity="1" d="M0,96L0,192L45,192L45,0L90,0L90,288L135,288L135,288L180,288L180,128L225,128L225,256L270,256L270,128L315,128L315,96L360,96L360,224L405,224L405,192L450,192L450,96L495,96L495,64L540,64L540,160L585,160L585,64L630,64L630,32L675,32L675,192L720,192L720,32L765,32L765,288L810,288L810,32L855,32L855,160L900,160L900,96L945,96L945,0L990,0L990,160L1035,160L1035,224L1080,224L1080,128L1125,128L1125,128L1170,128L1170,160L1215,160L1215,32L1260,32L1260,128L1305,128L1305,320L1350,320L1350,32L1395,32L1395,160L1440,160L1440,320L1395,320L1395,320L1350,320L1350,320L1305,320L1305,320L1260,320L1260,320L1215,320L1215,320L1170,320L1170,320L1125,320L1125,320L1080,320L1080,320L1035,320L1035,320L990,320L990,320L945,320L945,320L900,320L900,320L855,320L855,320L810,320L810,320L765,320L765,320L720,320L720,320L675,320L675,320L630,320L630,320L585,320L585,320L540,320L540,320L495,320L495,320L450,320L450,320L405,320L405,320L360,320L360,320L315,320L315,320L270,320L270,320L225,320L225,320L180,320L180,320L135,320L135,320L90,320L90,320L45,320L45,320L0,320L0,320Z"></path></svg>
@@ -282,14 +323,14 @@
       <div class="footer-divider"></div>
 
       <div class="footer-right">
-        <h3>Sign up for our Newsletter</h3>
+        <h3>Connect for our Newsletter</h3>
         <form class="newsletter-form">
           <input type="email" placeholder="Enter your email" required />
-          <button type="submit" class="sign-up" id="news-button">
+          <button type="submit" class="connect" id="news-button">
             Subscribe
           </button>
         </form>
-        <h3 id="email">melofy.ask@gmail.com</h3>
+        <h3 id="email">jed.o@aoa.school</h3>
       </div>
     </footer>
    <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>

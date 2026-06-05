@@ -1,0 +1,9 @@
+            <h2>What needs to Change?</h2>
+            <div>
+                <p>These harmful stereotypes are constantly perpetuated by Western Media but what should we do to change, including 
+                    you? We'll firstly I belive the use of Inclusive language and unbiased narratives focusing on the bulk
+                    of achievements and improvements being achieved by the continent is the first necessary step.Intentional and
+                    focused effort is needed.Moreover, provision of equal opportunities is a key step to a global world, where you and me 
+                    can enjoy equal benefits and finally achieve and follow our dreams.
+                </p>
+            </div>

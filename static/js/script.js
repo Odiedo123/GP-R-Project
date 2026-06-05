@@ -249,6 +249,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: false });
 });
 
+
+
+
+
 const cursorDot = document.querySelector('.custom-dot-cursor');
 
 window.addEventListener('mousemove', (e) => {
