@@ -1,43 +1,530 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/others.css" />
-        <link rel="stylesheet" href="/static/css/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Google+sans|Lobster|Roboto"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Lobster&display=swap" rel="stylesheet">
+  <title>Odiedo Initiative - Africa</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #c6db05;
+      --accent-glow: rgba(198, 219, 5, 0.35);
+      --glass: rgba(255,255,255,0.07);
+      --glass-border: rgba(255,255,255,0.15);
+      --text: #f0ece4;
+      --muted: rgba(240,236,228,0.6);
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      height: auto;
+      cursor: none;
+      font-family: "Nunito", sans-serif;
+      color: var(--text);
+    }
+
+    .custom-dot-cursor {
+      width: 35px; height: 35px;
+      background: rgba(198, 219, 5, 0.352);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(10px) saturate(180%);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      animation: quantum-vibrate 5s infinite linear;
+      transform: translate(-50%, -50%);
+    }
+
+    @keyframes quantum-vibrate {
+      0%   { transform: translate(-50%,-50%) scale(1);    border-radius: 50% 45% 52% 48%; }
+      20%  { transform: translate(-52%,-47%) scale(0.98); border-radius: 48% 52% 45% 55%; }
+      40%  { transform: translate(-47%,-53%) scale(1.02); border-radius: 52% 48% 50% 45%; }
+      60%  { transform: translate(-53%,-49%) scale(0.95); border-radius: 45% 55% 48% 52%; }
+      80%  { transform: translate(-48%,-51%) scale(1.05); border-radius: 50% 45% 55% 48%; }
+      100% { transform: translate(-50%,-50%) scale(1);    border-radius: 50% 45% 52% 48%; }
+    }
+
+    .blob-bg {
+      position: fixed; inset: 0; z-index: -2;
+      background-color: #4b364b; overflow: hidden;
+    }
+
+    .blob {
+      position: absolute; border-radius: 50%;
+      filter: blur(80px); opacity: 0.55;
+      animation: float linear infinite; will-change: transform;
+    }
+    .blob:nth-child(1) { width:500px;height:500px; background:radial-gradient(circle,#7c3aed,transparent 40%); top:-10%;left:-5%; animation-duration:28s; }
+    .blob:nth-child(2) { width:420px;height:420px; background:radial-gradient(circle,#0ea5e9,transparent 40%); top:50%;left:70%; animation-duration:34s;animation-delay:-8s; }
+    .blob:nth-child(3) { width:380px;height:380px; background:radial-gradient(circle,#f97316,transparent 40%); top:70%;left:10%; animation-duration:22s;animation-delay:-14s; }
+    .blob:nth-child(4) { width:300px;height:300px; background:radial-gradient(circle,#10b981,transparent 40%); top:20%;left:60%; animation-duration:40s;animation-delay:-4s; }
+    .blob:nth-child(5) { width:450px;height:450px; background:radial-gradient(circle,#ec4899,transparent 40%); top:40%;left:30%; animation-duration:30s;animation-delay:-20s; }
+    .blob:nth-child(6) { width:260px;height:260px; background:radial-gradient(circle,#f59e0b,transparent 40%); top:5%;left:45%; animation-duration:26s;animation-delay:-10s; }
+    .blob:nth-child(7) { width:320px;height:320px; background:radial-gradient(circle,#06b6d4,transparent 40%); top:80%;left:55%; animation-duration:36s;animation-delay:-18s; }
+
+    @keyframes float {
+      0%   { transform: translate(0,0)      scale(1);    }
+      15%  { transform: translate(80px,-60px) scale(1.05); }
+      30%  { transform: translate(-40px,100px) scale(0.95); }
+      45%  { transform: translate(120px,60px) scale(1.1);  }
+      60%  { transform: translate(-80px,-30px) scale(1);   }
+      75%  { transform: translate(50px,120px)  scale(0.9); }
+      90%  { transform: translate(-100px,40px) scale(1.05); }
+      100% { transform: translate(0,0)      scale(1);    }
+    }
+
+    /* NAV */
+    #nav-bar {
+      display: flex; flex-direction: row; align-items: center;
+      width: 100vw; height: 10vh; position: sticky; top: 0;
+      z-index: 100;
+      background: rgba(75, 54, 75, 0.55);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--glass-border);
+    }
+    #nav-bar h2 {
+      font-family: "Lobster", Arial, sans-serif;
+      cursor: pointer; font-size: 2em; margin-left: 40px; color: var(--accent);
+    }
+    #rest {
+      display: flex; flex-direction: row; align-items: center;
+      margin-left: auto; margin-right: 40px; height: 100%;
+    }
+    #rest a {
+      color: white; font-size: 1.1em; margin: 0 1.5rem;
+      cursor: pointer; font-family: "Oswald", sans-serif;
+      text-decoration: none; border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-bottom-color 0.3s;
+    }
+    #rest a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* PAGE HEADER */
+    .page-header {
+      text-align: center; padding: 4rem 2rem 2rem;
+      max-width: 700px;
+    }
+    .page-header h1 {
+      font-family: "Playfair", serif; font-size: 2.8em;
+      font-weight: 700; line-height: 1.2;
+      background: linear-gradient(135deg, #f0ece4 0%, var(--accent) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .page-header p {
+      margin-top: 1rem; font-size: 1.1em; color: var(--muted); line-height: 1.7;
+    }
+
+    /* ── SLIDESHOW ─────────────────────────────────────────── */
+    .slideshow-wrapper {
+      width: 96vw; max-width: 1200px;
+      margin: 1.5rem auto 3rem;
+    }
+    .slideshow-label {
+      font-family: "Oswald", sans-serif; font-size: 0.8em;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.75rem;
+    }
+    .slideshow {
+      position: relative; border-radius: 20px; overflow: hidden;
+      height: 340px;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 0 60px rgba(0,0,0,0.4);
+    }
+
+    .slide {
+      position: absolute; inset: 0;
+      opacity: 0; transition: opacity 0.8s ease;
+      display: flex; align-items: flex-end;
+    }
+    .slide.active { opacity: 1; }
+
+    .slide-img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      filter: brightness(0.7) saturate(1.2);
+    }
+
+    .slide-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,5,15,0.85) 0%, rgba(10,5,15,0.2) 50%, transparent 100%);
+    }
+
+    .slide-content {
+      position: relative; z-index: 2;
+      padding: 2rem 2.5rem; width: 100%;
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .slide-flag { font-size: 3.5em; line-height: 1; }
+    .slide-country {
+      font-family: "Playfair", serif; font-size: 2.2em; font-weight: 700;
+      color: white; line-height: 1.1; margin-top: 0.25rem;
+    }
+    .slide-capital {
+      font-family: "Oswald", sans-serif; font-size: 0.9em;
+      color: rgba(240,236,228,0.7); letter-spacing: 0.1em; margin-top: 4px;
+    }
+    .slide-btn {
+      flex-shrink: 0;
+      padding: 0.7rem 1.6rem;
+      background: var(--accent); color: #1a1a1a;
+      border: none; border-radius: 50px;
+      font-family: "Oswald", sans-serif; font-size: 0.9em;
+      font-weight: 600; letter-spacing: 0.08em;
+      cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
+      text-transform: uppercase;
+    }
+    .slide-btn:hover {
+      transform: scale(1.06);
+      box-shadow: 0 6px 24px rgba(198,219,5,0.4);
+    }
+
+    /* progress dots */
+    .slide-dots {
+      display: flex; gap: 6px;
+      position: absolute; bottom: 1.2rem; left: 50%;
+      transform: translateX(-50%); z-index: 10;
+    }
+    .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(255,255,255,0.35);
+      transition: background 0.3s, width 0.3s;
+    }
+    .dot.active { background: var(--accent); width: 18px; border-radius: 4px; }
+
+    /* progress bar */
+    .slide-progress {
+      position: absolute; bottom: 0; left: 0; height: 3px;
+      background: var(--accent); z-index: 10;
+      animation: progress-fill 4s linear infinite;
+    }
+    @keyframes progress-fill { from { width:0% } to { width:100% } }
+
+    /* ── COUNTRIES GRID ────────────────────────────────────── */
+    .grid-section {
+      width: 96vw; max-width: 1400px; margin: 0 auto 6rem;
+    }
+    .grid-section-label {
+      font-family: "Oswald", sans-serif; font-size: 0.8em;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1rem;
+    }
+
+    .countries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .country-card {
+      position: relative; border-radius: 16px; overflow: hidden;
+      height: 220px; cursor: pointer;
+      border: 1px solid var(--glass-border);
+      transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s;
+      animation: cardIn 0.5s both;
+    }
+    .country-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(198,219,5,0.3);
+    }
+    .country-card:hover .card-img { filter: brightness(0.75) saturate(1.3); }
+    .country-card:hover .card-hover-ring { opacity: 1; }
+
+    .card-hover-ring {
+      position: absolute; inset: 0; border-radius: 16px;
+      border: 2px solid var(--accent); opacity: 0;
+      transition: opacity 0.3s; pointer-events: none; z-index: 4;
+    }
+
+    @keyframes cardIn {
+      from { opacity:0; transform: translateY(20px) scale(0.97); }
+      to   { opacity:1; transform: translateY(0)    scale(1); }
+    }
+
+    .card-img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center;
+      transition: filter 0.3s; display: block;
+    }
+    .card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,5,20,0.88) 0%, rgba(10,5,20,0.2) 55%, transparent 100%);
+    }
+    .card-body {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 1rem 1rem 0.85rem; z-index: 2;
+    }
+    .card-flag { font-size: 1.8em; line-height: 1; }
+    .card-name {
+      font-family: "Playfair", serif; font-size: 1em; font-weight: 700;
+      color: white; margin-top: 4px; line-height: 1.2;
+    }
+    .card-capital {
+      font-size: 0.73em; color: var(--muted);
+      font-family: "Oswald", sans-serif; letter-spacing: 0.07em;
+      margin-top: 3px;
+    }
+    .card-region-badge {
+      position: absolute; top: 10px; right: 10px; z-index: 3;
+      font-family: "Oswald", sans-serif; font-size: 0.62em;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 20px;
+      background: var(--glass); backdrop-filter: blur(8px);
+      border: 1px solid var(--glass-border); color: var(--muted);
+    }
+
+    /* region color tags */
+    .r-north  { background: rgba(139,92,246,0.35); border-color: rgba(139,92,246,0.5); color: #d8b4fe; }
+    .r-west   { background: rgba(249,115,22,0.35); border-color: rgba(249,115,22,0.5); color: #fdba74; }
+    .r-east   { background: rgba(16,185,129,0.35); border-color: rgba(16,185,129,0.5); color: #6ee7b7; }
+    .r-central{ background: rgba(14,165,233,0.35); border-color: rgba(14,165,233,0.5); color: #7dd3fc; }
+    .r-south  { background: rgba(236,72,153,0.35); border-color: rgba(236,72,153,0.5); color: #f9a8d4; }
+
+    /* staggered animation delays */
+    .countries-grid .country-card:nth-child(1)  { animation-delay: 0.00s }
+    .countries-grid .country-card:nth-child(2)  { animation-delay: 0.03s }
+    .countries-grid .country-card:nth-child(3)  { animation-delay: 0.06s }
+    .countries-grid .country-card:nth-child(4)  { animation-delay: 0.09s }
+    .countries-grid .country-card:nth-child(5)  { animation-delay: 0.12s }
+    .countries-grid .country-card:nth-child(6)  { animation-delay: 0.15s }
+    .countries-grid .country-card:nth-child(7)  { animation-delay: 0.18s }
+    .countries-grid .country-card:nth-child(8)  { animation-delay: 0.21s }
+    .countries-grid .country-card:nth-child(9)  { animation-delay: 0.24s }
+    .countries-grid .country-card:nth-child(10) { animation-delay: 0.27s }
+    .countries-grid .country-card:nth-child(n+11) { animation-delay: 0.30s }
+
+    /* highlight flash when scrolled to */
+    @keyframes highlight-pulse {
+      0%   { box-shadow: 0 0 0 0px rgba(198,219,5,0.7); }
+      50%  { box-shadow: 0 0 0 8px rgba(198,219,5,0.25); }
+      100% { box-shadow: 0 0 0 0px rgba(198,219,5,0); }
+    }
+    .highlight-flash { animation: highlight-pulse 1.2s ease-out; }
+  </style>
 </head>
 <body>
-    <div class="custom-dot-cursor"></div>
-    <div class="blob-bg">
-        <div class="blob"></div>
-        <div class="blob"></div>
-        <div class="blob"></div>
-        <div class="blob"></div>
-        <div class="blob"></div>
-        <div class="blob"></div>
-        <div class="blob"></div>
-    </div>
-    <div id="nav-bar">
-        <h2>Odiedo Initiative</h2>
-        <div id="rest">
-            <a href="/" style="text-decoration: none; color: white">Home</a>
-            <a href="/about" style="text-decoration: none; color: white">About</a>
-            <a href="/africa" style="text-decoration: none; color: white">Africa</a>
-            <a href="/connect" style="text-decoration: none; color: white">Connect</a>
-        </div>
-    </div>
+  <div class="custom-dot-cursor" id="cursor"></div>
 
-    <script type="module" src="{{ url_for('static', filename='js/others.js') }}"></script>
+  <div class="blob-bg">
+    <div class="blob"></div><div class="blob"></div><div class="blob"></div>
+    <div class="blob"></div><div class="blob"></div><div class="blob"></div>
+    <div class="blob"></div>
+  </div>
+
+  <nav id="nav-bar">
+    <h2>Odiedo Initiative</h2>
+    <div id="rest">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/africa">Africa</a>
+      <a href="/connect">Connect</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Discover Africa</h1>
+    <p>A vibrant continent of 54 nations — each with its own culture, history, and heartbeat. Explore every corner.</p>
+  </div>
+
+  <!-- SLIDESHOW -->
+  <div class="slideshow-wrapper">
+    <div class="slideshow-label">✦ Featured Countries</div>
+    <div class="slideshow" id="slideshow">
+      <!-- slides injected by JS -->
+      <div class="slide-dots" id="slide-dots"></div>
+      <div class="slide-progress" id="slide-progress"></div>
+    </div>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid-section">
+    <div class="slideshow-label">✦ All 54 Countries</div>
+    <div class="countries-grid" id="countries-grid">
+      <!-- cards injected by JS -->
+    </div>
+  </div>
+
+  <script>
+    /* ── DATA ──────────────────────────────────────────────── */
+    const COUNTRIES = [
+      // North Africa
+      { name:"Algeria",         capital:"Algiers",         flag:"🇩🇿", region:"north",   img:"https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80" },
+      { name:"Egypt",           capital:"Cairo",           flag:"🇪🇬", region:"north",   img:"https://images.unsplash.com/photo-1539768942893-daf53e448371?w=800&q=80" },
+      { name:"Libya",           capital:"Tripoli",         flag:"🇱🇾", region:"north",   img:"https://images.unsplash.com/photo-1586005660475-5ea0dbbd04c7?w=800&q=80" },
+      { name:"Morocco",         capital:"Rabat",           flag:"🇲🇦", region:"north",   img:"https://images.unsplash.com/photo-1553603227-2358aabe821e?w=800&q=80" },
+      { name:"Sudan",           capital:"Khartoum",        flag:"🇸🇩", region:"north",   img:"https://images.unsplash.com/photo-1564507004663-b6dfb3c824d5?w=800&q=80" },
+      { name:"Tunisia",         capital:"Tunis",           flag:"🇹🇳", region:"north",   img:"https://images.unsplash.com/photo-1565017228520-df9b3df68e32?w=800&q=80" },
+      { name:"Mauritania",      capital:"Nouakchott",      flag:"🇲🇷", region:"north",   img:"https://images.unsplash.com/photo-1570358934836-6802981e481e?w=800&q=80" },
+
+      // West Africa
+      { name:"Benin",           capital:"Porto-Novo",      flag:"🇧🇯", region:"west",    img:"https://images.unsplash.com/photo-1584979099024-6cd3b48748ad?w=800&q=80" },
+      { name:"Burkina Faso",    capital:"Ouagadougou",     flag:"🇧🇫", region:"west",    img:"https://images.unsplash.com/photo-1580077938849-c37b0d0e07f7?w=800&q=80" },
+      { name:"Cape Verde",      capital:"Praia",           flag:"🇨🇻", region:"west",    img:"https://images.unsplash.com/photo-1547637589-f54c34f5d7a4?w=800&q=80" },
+      { name:"Côte d'Ivoire",   capital:"Yamoussoukro",    flag:"🇨🇮", region:"west",    img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" },
+      { name:"Gambia",          capital:"Banjul",          flag:"🇬🇲", region:"west",    img:"https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=800&q=80" },
+      { name:"Ghana",           capital:"Accra",           flag:"🇬🇭", region:"west",    img:"https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80" },
+      { name:"Guinea",          capital:"Conakry",         flag:"🇬🇳", region:"west",    img:"https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=800&q=80" },
+      { name:"Guinea-Bissau",   capital:"Bissau",          flag:"🇬🇼", region:"west",    img:"https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80" },
+      { name:"Liberia",         capital:"Monrovia",        flag:"🇱🇷", region:"west",    img:"https://images.unsplash.com/photo-1532635241-17e820acc59f?w=800&q=80" },
+      { name:"Mali",            capital:"Bamako",          flag:"🇲🇱", region:"west",    img:"https://images.unsplash.com/photo-1603404235009-71c1d80e6b4e?w=800&q=80" },
+      { name:"Niger",           capital:"Niamey",          flag:"🇳🇪", region:"west",    img:"https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&q=80" },
+      { name:"Nigeria",         capital:"Abuja",           flag:"🇳🇬", region:"west",    img:"https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&q=80" },
+      { name:"Senegal",         capital:"Dakar",           flag:"🇸🇳", region:"west",    img:"https://images.unsplash.com/photo-1570158268183-d296b2892211?w=800&q=80" },
+      { name:"Sierra Leone",    capital:"Freetown",        flag:"🇸🇱", region:"west",    img:"https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80" },
+      { name:"Togo",            capital:"Lomé",            flag:"🇹🇬", region:"west",    img:"https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?w=800&q=80" },
+
+      // East Africa
+      { name:"Burundi",         capital:"Gitega",          flag:"🇧🇮", region:"east",    img:"https://images.unsplash.com/photo-1529963183134-61a90db47eaf?w=800&q=80" },
+      { name:"Comoros",         capital:"Moroni",          flag:"🇰🇲", region:"east",    img:"https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&q=80" },
+      { name:"Djibouti",        capital:"Djibouti City",   flag:"🇩🇯", region:"east",    img:"https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80" },
+      { name:"Eritrea",         capital:"Asmara",          flag:"🇪🇷", region:"east",    img:"https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80" },
+      { name:"Ethiopia",        capital:"Addis Ababa",     flag:"🇪🇹", region:"east",    img:"https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800&q=80" },
+      { name:"Kenya",           capital:"Nairobi",         flag:"🇰🇪", region:"east",    img:"https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80" },
+      { name:"Madagascar",      capital:"Antananarivo",    flag:"🇲🇬", region:"east",    img:"https://images.unsplash.com/photo-1504567961542-e24d9439a724?w=800&q=80" },
+      { name:"Malawi",          capital:"Lilongwe",        flag:"🇲🇼", region:"east",    img:"https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&q=80" },
+      { name:"Mauritius",       capital:"Port Louis",      flag:"🇲🇺", region:"east",    img:"https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?w=800&q=80" },
+      { name:"Mozambique",      capital:"Maputo",          flag:"🇲🇿", region:"east",    img:"https://images.unsplash.com/photo-1439853949212-36589f9a91a3?w=800&q=80" },
+      { name:"Rwanda",          capital:"Kigali",          flag:"🇷🇼", region:"east",    img:"https://images.unsplash.com/photo-1529963183134-61a90db47eaf?w=800&q=80" },
+      { name:"Seychelles",      capital:"Victoria",        flag:"🇸🇨", region:"east",    img:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80" },
+      { name:"Somalia",         capital:"Mogadishu",       flag:"🇸🇴", region:"east",    img:"https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80" },
+      { name:"South Sudan",     capital:"Juba",            flag:"🇸🇸", region:"east",    img:"https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80" },
+      { name:"Tanzania",        capital:"Dodoma",          flag:"🇹🇿", region:"east",    img:"https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80" },
+      { name:"Uganda",          capital:"Kampala",         flag:"🇺🇬", region:"east",    img:"https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800&q=80" },
+      { name:"Zambia",          capital:"Lusaka",          flag:"🇿🇲", region:"east",    img:"https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&q=80" },
+      { name:"Zimbabwe",        capital:"Harare",          flag:"🇿🇼", region:"east",    img:"https://images.unsplash.com/photo-1439853949212-36589f9a91a3?w=800&q=80" },
+
+      // Central Africa
+      { name:"Angola",          capital:"Luanda",          flag:"🇦🇴", region:"central", img:"https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=800&q=80" },
+      { name:"Cameroon",        capital:"Yaoundé",         flag:"🇨🇲", region:"central", img:"https://images.unsplash.com/photo-1532635241-17e820acc59f?w=800&q=80" },
+      { name:"CAR",             capital:"Bangui",          flag:"🇨🇫", region:"central", img:"https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80" },
+      { name:"Chad",            capital:"N'Djamena",       flag:"🇹🇩", region:"central", img:"https://images.unsplash.com/photo-1570358934836-6802981e481e?w=800&q=80" },
+      { name:"Congo",           capital:"Brazzaville",     flag:"🇨🇬", region:"central", img:"https://images.unsplash.com/photo-1529963183134-61a90db47eaf?w=800&q=80" },
+      { name:"DR Congo",        capital:"Kinshasa",        flag:"🇨🇩", region:"central", img:"https://images.unsplash.com/photo-1604537466158-719b1972feb8?w=800&q=80" },
+      { name:"Eq. Guinea",      capital:"Malabo",          flag:"🇬🇶", region:"central", img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" },
+      { name:"Gabon",           capital:"Libreville",      flag:"🇬🇦", region:"central", img:"https://images.unsplash.com/photo-1604537466158-719b1972feb8?w=800&q=80" },
+      { name:"São Tomé",        capital:"São Tomé",        flag:"🇸🇹", region:"central", img:"https://images.unsplash.com/photo-1547637589-f54c34f5d7a4?w=800&q=80" },
+
+      // Southern Africa
+      { name:"Botswana",        capital:"Gaborone",        flag:"🇧🇼", region:"south",   img:"https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80" },
+      { name:"Eswatini",        capital:"Mbabane",         flag:"🇸🇿", region:"south",   img:"https://images.unsplash.com/photo-1504932182053-db32a3a68d3c?w=800&q=80" },
+      { name:"Lesotho",         capital:"Maseru",          flag:"🇱🇸", region:"south",   img:"https://images.unsplash.com/photo-1504932182053-db32a3a68d3c?w=800&q=80" },
+      { name:"Namibia",         capital:"Windhoek",        flag:"🇳🇦", region:"south",   img:"https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80" },
+      { name:"South Africa",    capital:"Pretoria",        flag:"🇿🇦", region:"south",   img:"https://images.unsplash.com/photo-1526779259212-939e64788e3c?w=800&q=80" },
+    ];
+
+    /* slideshow picks */
+    const FEATURED_INDICES = [27, 12, 7, 28, 49, 3, 36, 26, 53, 11, 31, 34];
+
+    /* ── CURSOR ───────────────────────────────────────────── */
+    const cursor = document.getElementById('cursor');
+    window.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top  = e.clientY + 'px';
+    });
+
+    /* ── GRID BUILD ───────────────────────────────────────── */
+    const grid = document.getElementById('countries-grid');
+    const regionLabel = { north:'North', west:'West', east:'East', central:'Central', south:'South' };
+    const regionClass  = { north:'r-north', west:'r-west', east:'r-east', central:'r-central', south:'r-south' };
+
+    COUNTRIES.forEach((c, i) => {
+      const card = document.createElement('div');
+      card.className = 'country-card';
+      card.id = `country-${i}`;
+      card.innerHTML = `
+        <img class="card-img" src="${c.img}" alt="${c.name}" loading="lazy">
+        <div class="card-overlay"></div>
+        <div class="card-hover-ring"></div>
+        <span class="card-region-badge ${regionClass[c.region]}">${regionLabel[c.region]}</span>
+        <div class="card-body">
+          <div class="card-flag">${c.flag}</div>
+          <div class="card-name">${c.name}</div>
+          <div class="card-capital">${c.capital}</div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    /* ── SLIDESHOW BUILD ──────────────────────────────────── */
+    const slideshow   = document.getElementById('slideshow');
+    const dotsWrap    = document.getElementById('slide-dots');
+    const progressBar = document.getElementById('slide-progress');
+    let currentSlide  = 0;
+    let autoTimer;
+
+    FEATURED_INDICES.forEach((idx, si) => {
+      const c = COUNTRIES[idx];
+      const slide = document.createElement('div');
+      slide.className = 'slide' + (si === 0 ? ' active' : '');
+      slide.innerHTML = `
+        <img class="slide-img" src="${c.img}" alt="${c.name}">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <div class="slide-info">
+            <div class="slide-flag">${c.flag}</div>
+            <div class="slide-country">${c.name}</div>
+            <div class="slide-capital">Capital: ${c.capital} &nbsp;·&nbsp; ${regionLabel[c.region]} Africa</div>
+          </div>
+          <button class="slide-btn" data-idx="${idx}">View in Grid →</button>
+        </div>
+      `;
+      slideshow.insertBefore(slide, dotsWrap);
+
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (si === 0 ? ' active' : '');
+      dot.addEventListener('click', () => goToSlide(si));
+      dotsWrap.appendChild(dot);
+    });
+
+    const slides = slideshow.querySelectorAll('.slide');
+    const dots   = dotsWrap.querySelectorAll('.dot');
+
+    function goToSlide(n) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      currentSlide = (n + FEATURED_INDICES.length) % FEATURED_INDICES.length;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+      restartProgress();
+    }
+
+    function restartProgress() {
+      progressBar.style.animation = 'none';
+      void progressBar.offsetWidth;
+      progressBar.style.animation = 'progress-fill 4s linear infinite';
+    }
+
+    function startAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(() => goToSlide(currentSlide + 1), 4000);
+    }
+
+    /* slide-btn → scroll to grid card */
+    slideshow.addEventListener('click', e => {
+      const btn = e.target.closest('.slide-btn');
+      if (!btn) return;
+      const idx  = parseInt(btn.dataset.idx);
+      const card = document.getElementById(`country-${idx}`);
+      if (!card) return;
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => {
+        card.classList.remove('highlight-flash');
+        void card.offsetWidth;
+        card.classList.add('highlight-flash');
+      }, 600);
+    });
+
+    startAuto();
+  </script>
 </body>
 </html>

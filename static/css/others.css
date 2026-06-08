@@ -10,6 +10,10 @@ body{
   cursor: none;
 }
 
+h1{
+  font-size: 1.4em;
+}
+
 .custom-dot-cursor {
   width: 35px;
   height: 35px;
@@ -49,7 +53,6 @@ body{
     border-radius: 50% 45% 52% 48%;
   }
 }
-
 
 .blob-bg {
   position: fixed;
@@ -184,5 +187,52 @@ body{
   }
   to {
     border-bottom: 3px solid rgb(0, 255, 242);
+  }
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 98vw;
+  height: auto;
+}
+
+.container .row{
+  display: flex;
+  flex-direction: row;
+}
+
+.container .row div{
+  display: flex;
+  flex-direction: column;  
+  height: 50vh;
+  width: 25%;
+  border: 3px solid red;
+}
+
+
+.fade-in-1 {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.fade-in-2 {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.fade-in-3 {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
