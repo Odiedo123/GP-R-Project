@@ -1,0 +1,238 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y:scroll;
+  height: auto; 
+  cursor: none;
+}
+
+h1{
+  font-size: 1.4em;
+}
+
+.custom-dot-cursor {
+  width: 35px;
+  height: 35px;
+  background: rgba(198, 219, 5, 0.352);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border-radius: 50%; 
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  animation: quantum-vibrate 5s infinite linear;
+}
+
+@keyframes quantum-vibrate {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 50% 45% 52% 48%;
+  }
+  20% {
+    transform: translate(-52%, -47%) scale(0.98);
+    border-radius: 48% 52% 45% 55%;
+  }
+  40% {
+    transform: translate(-47%, -53%) scale(1.02);
+    border-radius: 52% 48% 50% 45%;
+  }
+  60% {
+    transform: translate(-53%, -49%) scale(0.95);
+    border-radius: 45% 55% 48% 52%;
+  }
+  80% {
+    transform: translate(-48%, -51%) scale(1.05);
+    border-radius: 50% 45% 55% 48%;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 50% 45% 52% 48%;
+  }
+}
+
+.blob-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-color: #4b364b;
+  overflow: hidden;
+}
+ 
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  animation: float linear infinite;
+  will-change: transform;
+}
+ 
+.blob:nth-child(1) {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, #7c3aed, transparent 40%);
+  top: -10%; left: -5%;
+  animation-duration: 28s; animation-delay: 0s;
+}
+
+.blob:nth-child(2) {
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, #0ea5e9, transparent 40%);
+  top: 50%; left: 70%;
+  animation-duration: 34s; animation-delay: -8s;
+}
+
+.blob:nth-child(3) {
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, #f97316, transparent 40%);
+  top: 70%; left: 10%;
+  animation-duration: 22s; animation-delay: -14s;
+}
+
+.blob:nth-child(4) {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, #10b981, transparent 40%);
+  top: 20%; left: 60%;
+  animation-duration: 40s; animation-delay: -4s;
+}
+
+.blob:nth-child(5) {
+  width: 450px; height: 450px;
+  background: radial-gradient(circle, #ec4899, transparent 40%);
+  top: 40%; left: 30%;
+  animation-duration: 30s; animation-delay: -20s;
+}
+
+.blob:nth-child(6) {
+  width: 260px; height: 260px;
+  background: radial-gradient(circle, #f59e0b, transparent 40%);
+  top: 5%; left: 45%;
+  animation-duration: 26s; animation-delay: -10s;
+}
+.blob:nth-child(7) {
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, #06b6d4, transparent 40%);
+  top: 80%; left: 55%;
+  animation-duration: 36s; animation-delay: -18s;
+}
+ 
+@keyframes float {
+  0%   { transform: translate(0px,   0px)   scale(1);    }
+  15%  { transform: translate(80px,  -60px) scale(1.05); }
+  30%  { transform: translate(-40px, 100px) scale(0.95); }
+  45%  { transform: translate(120px, 60px)  scale(1.1);  }
+  60%  { transform: translate(-80px, -30px) scale(1);    }
+  75%  { transform: translate(50px,  120px) scale(0.9);  }
+  90%  { transform: translate(-100px, 40px) scale(1.05); }
+  100% { transform: translate(0px,   0px)   scale(1);    }
+}
+
+.section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 98vw;
+  height: 90vh;
+  margin-top: 15vh;
+  overflow: hidden;
+}
+
+#nav-bar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+}
+
+#nav-bar h2{
+  font-family: "Lobster", Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  font-size: 2em;
+  margin-left: 40px;
+}
+
+#rest{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: flex-end;
+  margin-left: 50%;
+  height: 100%;
+}
+
+#rest a{
+  color: white;
+  font-size: 1.3em;
+  margin: 5vh;
+  cursor: pointer; 
+  font-family: "Oswald", sans-serif;
+}
+
+#rest a {
+  border-bottom: 3px solid transparent; 
+  transition: border-bottom 3s; 
+}
+
+#rest a:hover {
+  animation: hover-link 0.3s forwards; /* Added 'forwards' here */
+}
+
+@keyframes hover-link {
+  from {
+    border-bottom: 3px solid white;
+  }
+  to {
+    border-bottom: 3px solid rgb(0, 255, 242);
+  }
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 98vw;
+  height: auto;
+}
+
+.container .row{
+  display: flex;
+  flex-direction: row;
+}
+
+.container .row div{
+  display: flex;
+  flex-direction: column;  
+  height: 50vh;
+  width: 25%;
+  border: 3px solid red;
+}
+
+
+.fade-in-1 {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.fade-in-2 {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.fade-in-3 {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
