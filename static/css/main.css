@@ -630,7 +630,16 @@ h2, h1{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-left: -50px;
+}
+
+#seventh-R p{
+  text-align: center;
+}
+
+#titis{
+  font-size: 2em;
 }
 
 #seventh-R h2{
