@@ -65,10 +65,11 @@ p,h1,h2,h3 {
 
 p{
   font-family: "Nunito", sans-serif;
+  font-size: 1.2em;
 }
 
 h1{
-  font-size: 3.7em;
+  font-size: 3em;
   font-family: "Playfair Display", sans-serif;
 }
 
@@ -288,6 +289,7 @@ h2, h1{
 
 #first{
   width: 100vw;
+  height: 70vh;
   background: rgba(0, 168, 101, 0.352);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -314,6 +316,18 @@ h2, h1{
   width: 1000px;    
   height: 650px;
   background: transparent;
+}
+
+.hero-scroll-hint {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 12px; margin-top: 4rem; color: var(--muted);
+  font-family: "Oswald", sans-serif; font-size: 0.72em;
+  letter-spacing: 0.15em; text-transform: uppercase;
+}
+.scroll-line {
+  width: 1px; height: 60px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: pulse-line 2s ease-in-out infinite;
 }
 
 #quote-section{
@@ -460,6 +474,9 @@ h2, h1{
   flex-direction: column;
   align-items: center;
 }
+[id="4L"] p{
+  font-size: 1em;
+}
 
 [id="4R"]{
   display: flex;
@@ -471,8 +488,8 @@ h2, h1{
 
 #sixth-section{
   height: 80vh;
+  border: 1px dashed green;
   margin-top: 150px;
-  border: 3px solid red;
   display: flex;
   flex-direction: row;
   justify-content: center;

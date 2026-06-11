@@ -11,6 +11,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Google+sans|Lobster|Roboto"
     />
+        <link
+      rel="icon"
+      href="https://github.com/Odiedo123/Melofy/blob/main/static/Images/melofy-icon-only.png"
+      type="image/png"
+      sizes="32x32"
+    />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,6 +60,10 @@
     <div class="section" id="first">                    <!--First Section-->
         <h1>How are Africans Represented In Global Media?</h1>
         <div id="threejs-model"></div>
+    </div>
+    <div class="hero-scroll-hint reveal delay-3">
+      <span>Scroll to read</span>
+      <div class="scroll-line"></div>
     </div>
     <div class="section" id="quote-section">   
         <h3 id="name">≋James Baldwin<br> (Antony Barboza | Getty Images)</h3>         <!--Second section-->
@@ -216,10 +226,14 @@
     </div>
     <div class="section" id="sixth-section">  <!-- Sixth Section -->
         <div>
-            <img width="auto" height="800px" src="{{url_for('static', filename='img/image.png')}}" />
+            <img width="650px" height="600px" src="{{url_for('static', filename='img/image.png')}}" />
         </div>
         <div>
-            <p>Absence of </p>
+            <h2>The Statistics</h2>
+            <p>The graph on the Left by <span id="highlighter" class="orange">(The Global Media Index, 2024)</span> is a heatmap showing coverage of the continent by major new outlets.
+                The disparity when it comes to tech and innovation is clear with conflict and famine
+                a clear favorite across all stations. Now after establishing that the problem exists how can we solve it?
+            </p>
         </div>
     </div>
     <svg id="top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00cba9" fill-opacity="1" d="M0,224L26.7,229.3C53.3,235,107,245,160,234.7C213.3,224,267,192,320,197.3C373.3,203,427,245,480,261.3C533.3,277,587,267,640,261.3C693.3,256,747,256,800,250.7C853.3,245,907,235,960,192C1013.3,149,1067,75,1120,74.7C1173.3,75,1227,149,1280,192C1333.3,235,1387,245,1413,250.7L1440,256L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
@@ -227,21 +241,25 @@
         <div id="seventh-L">
             <div class="glow-effect">
                 <div>
-                    <p><span class="enlarge">Ⅰ</span> Equal Representation</p>
+                    <p><span class="enlarge">Ⅰ.</span> Equal Representation</p>
                 </div>
             </div>
             <div class="glow-effect">
                 <div>
-                    <p><span class="enlarge">Ⅱ</span> Inclusive Language</p>
+                    <p><span class="enlarge">Ⅱ.</span> Inclusive Language</p>
                 </div>
             </div>
             <div class="glow-effect">
                 <div>
-                    <p><span class="enlarge">Ⅲ</span> Equal Opportunities</p>
+                    <p><span class="enlarge">Ⅲ.</span> Equal Opportunities</p>
                 </div>
             </div>
         </div>
         <div id="seventh-R">
+            <p>In light of this research my view on change is to curb the use of negative Language
+                and hold these sources accountable, giving rise to a new wave of news outlets from the continent to the 
+                continent with no intermediary.
+            </p>
         </div>
     </div>
     <svg class="flip-svg" style="margin-bottom: -100px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00cba9"  fill-opacity="1" d="M0,96L0,192L45,192L45,0L90,0L90,288L135,288L135,288L180,288L180,128L225,128L225,256L270,256L270,128L315,128L315,96L360,96L360,224L405,224L405,192L450,192L450,96L495,96L495,64L540,64L540,160L585,160L585,64L630,64L630,32L675,32L675,192L720,192L720,32L765,32L765,288L810,288L810,32L855,32L855,160L900,160L900,96L945,96L945,0L990,0L990,160L1035,160L1035,224L1080,224L1080,128L1125,128L1125,128L1170,128L1170,160L1215,160L1215,32L1260,32L1260,128L1305,128L1305,320L1350,320L1350,32L1395,32L1395,160L1440,160L1440,320L1395,320L1395,320L1350,320L1350,320L1305,320L1305,320L1260,320L1260,320L1215,320L1215,320L1170,320L1170,320L1125,320L1125,320L1080,320L1080,320L1035,320L1035,320L990,320L990,320L945,320L945,320L900,320L900,320L855,320L855,320L810,320L810,320L765,320L765,320L720,320L720,320L675,320L675,320L630,320L630,320L585,320L585,320L540,320L540,320L495,320L495,320L450,320L450,320L405,320L405,320L360,320L360,320L315,320L315,320L270,320L270,320L225,320L225,320L180,320L180,320L135,320L135,320L90,320L90,320L45,320L45,320L0,320L0,320Z"></path></svg>
@@ -335,7 +353,7 @@
     <footer class="custom-footer">
       <div class="footer-left">
         <img
-          src="static/Images/Melofy-Transparent-Logo.png"
+          src="https://github.com/Odiedo123/Melofy/blob/main/static/Images/melofy-icon-only.png"
           alt="Melofy Logo"
           class="footer-logo"
         />

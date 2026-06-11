@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rightPanel.classList.add('sixth-panel--entered');
 
       setTimeout(() => {
-        unlockScroll(sixthY);
+        unlockScroll(sixthY - 100);
         animating = false;
       }, PHASE + 50);
     }, PHASE);
