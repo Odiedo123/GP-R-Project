@@ -20,9 +20,9 @@ def about_page():
 def africa_page():
     return render_template('africa.html')
 
-@app.route("/connect")
-def connect_page():
-    return render_template('connect.html')
+@app.route("/sources")
+def sources_page():
+    return render_template('sources.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

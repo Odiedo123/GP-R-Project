@@ -397,6 +397,7 @@ h2, h1{
 
 #third-section div p{
   font-size: 1.4em;
+  text-align: center;
 }
 
 .slider {
@@ -469,7 +470,9 @@ h2, h1{
 
 
 #sixth-section{
+  height: 80vh;
   margin-top: 150px;
+  border: 3px solid red;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -785,4 +788,3 @@ form {
   justify-content: center;
   align-items: center;
 }
-
