@@ -1,64 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/connect.css" />
-        <link rel="stylesheet" href="/static/css/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Google+sans|Lobster|Roboto"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
-    <title>Odiedo Initiative - Connect</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/connect.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900&family=Lobster&display=swap" rel="stylesheet">
+  <title>Odiedo Initiative - Connect</title>
 </head>
 <body>
-    <div class="custom-dot-cursor"></div>
-    <div class="blob-bg">
-        <div class="blob"></div>
-        <div class="blob"></div>
-        <div class="blob"></div>
-        <div class="blob"></div>
-        <div class="blob"></div>
-        <div class="blob"></div>
-        <div class="blob"></div>
-    </div>
-    <div id="nav-bar">
-        <h2>Odiedo Initiative</h2>
-        <div id="rest">
-            <a href="/" style="text-decoration: none; color: white">Home</a>
-            <a href="/about" style="text-decoration: none; color: white">About</a>
-            <a href="/africa" style="text-decoration: none; color: white">Africa</a>
-            <a href="/connect" style="text-decoration: none; color: white">Connect</a>
-        </div>
-    </div>
-    <h1>Explore the research that made this possible</h1>
-    <div class="container">
-        <div class="row">
-            <div id="1"></div>
-            <div id="2"></div>
-            <div id="3"></div>
-            <div id="4"></div>
-        </div>
-        <div class="row">
-            <div id="1"></div>
-            <div id="2"></div>
-            <div id="3"></div>
-            <div id="4"></div>
-        </div>
-        <div class="row">
-            <div id="1"></div>
-            <div id="2"></div>
-            <div id="3"></div>
-            <div id="4"></div>
-        </div>
-    </div>
+  <div class="custom-dot-cursor" id="cursor"></div>
+  <div class="blob-bg">
+    <div class="blob"></div><div class="blob"></div><div class="blob"></div>
+    <div class="blob"></div><div class="blob"></div><div class="blob"></div>
+    <div class="blob"></div>
+  </div>
 
-    <script type="module" src="{{ url_for('static', filename='js/others.js') }}"></script>
+  <nav id="nav-bar">
+    <h2>Odiedo Initiative</h2>
+    <div id="rest">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/africa">Africa</a>
+      <a href="/connect">Connect</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Explore the Research Behind This</h1>
+    <p>Every insight on this site is grounded in careful research. Browse, filter, and follow the sources that shaped it.</p>
+  </div>
+
+
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" id="search" type="text" placeholder="Search sources, topics, authors…">
+  </div>
+
+
+  <div class="filter-bar" id="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+
+  </div>
+
+  <div class="result-count" id="result-count"></div>
+
+
+  <section class="sources-section">
+    <div class="sources-grid" id="sources-grid"></div>
+  </section>
+
+  <script>
+  const SOURCES = [
+    {
+      title:  "DW Breaking Stereotypes",
+      url:    "https://www.dw.com/en/how-can-africa-break-free-from-negative-stereotypes/a-70629933",
+      type:   "article",
+      desc:   "Article highlighting how African's can break negative stereotypes",
+      year:   2024,
+      author: "Okeri Ngutjinazo"
+    },
+    {
+      title:  "The Big Deal",
+      url:    "https://thebigdeal.substack.com/p/2025ir2",
+      type:   "dataset",
+      desc:   "Highlights economics on the continent with a focus on startups and their growth over the years",
+      year:   2026,
+      author: "Max Cuvellier Giacomelli"
+    },
+    {
+      title:  "Ajena Africa",
+      url:    "https://ajenafrica.com/whose-news-is-it-anyway-african-journalists-criticised-for-echoing-western-stories/",
+      type:   "report",
+      desc:   "Highlight the need for African news companies to focus and centralize around African stories, not mimicking western versions",
+      year:   2025,
+      author: "Ajen Africa"
+    },
+    {
+      title:  "Chimamanda Adichie - Ted Talk",
+      url:    "https://www.ted.com/talks/chimamanda_ngozi_adichie_the_danger_of_a_single_story",
+      type:   "video",
+      desc:   "Gives a deep view into the dangers of a one sided story and its effects on the African Population",
+      year:   2009,
+      author: "Chimammanda Ngozi Adichie"
+    },
+    {
+      title:  "Fray Intermedia",
+      url:    "https://www.frayintermedia.com/post/why-african-voices-are-underrepresented-in-global-media/",
+      type:   "website",
+      desc:   "Explaining the underrepresentation of Africans in Media",
+      year:   2024,
+      author: "Rebaona Modutwane"
+    },
+    {
+      title:  "The Guardian",
+      url:    "https://www.theguardian.com/global-development/2024/oct/17/media-stereotypes-africa-higher-interest-report-payments-on-sovereign-debt?utm_source=chatgpt.com",
+      type:   "article",
+      desc:   "Giving an economical view of the cost of Negative stereotypes on the continent and increased perceived risk.",
+      year:   2024,
+      author: "Caroline Kimeu"
+    },
+    {
+      title:  "Africa no Filter",
+      url:    "https://africanofilter.org/#",
+      type:   "website",
+      desc:   "A brimming startup aiming to conter negative stereotpes and show the world that Africans need no filter.",
+      year:   2025,
+      author: "Africa No Filter"
+    },
+    {
+      title:  "Gavi",
+      url:    "https://www.gavi.org/vaccineswork/africas-innovations-are-overlooked-because-global-measures-dont-fit-what-needs",
+      type:   "article",
+      desc:   "Explaining the overlooking of African Innovations across the globe and why they are overlooked.",
+      year:   2025,
+      author: "The Conversation"
+    },
+    {
+      title:  "The Converation",
+      url:    "https://theconversation.com/africas-innovations-are-overlooked-because-global-measures-dont-fit-what-needs-to-change-257984",
+      type:   "article",
+      desc:   "Explaining the overlooking of African Innovations across the globe and why they are overlooked.",
+      year:   2025,
+      author: "The Conversation"
+    },
+    {
+      title:  "Global Media Index",
+      url:    "https://theafricacenter.org/files/galleries/Global_Media_Index_2.pdf",
+      type:   "report",
+      desc:   "Reports on African representation in Media across different sectors and statistices with visualizations.",
+      year:   2024,
+      author: "The African Center"
+    },
+    {
+      title:  "Illinois State",
+      url:    "https://pol.illinoisstate.edu/downloads/student-life/conferences/1BHarth.pdf",
+      type:   "report",
+      desc:   "A research paper focusing on representation of Africans, myths , misconceptions and the truth.",
+      year:   0,
+      author: "Amy E. Harth"
+    },
+  ];
+
+  const TYPE_ICONS = {
+    journal: "📄", report: "📊", article: "📰",
+    dataset: "🗃️", book: "📚", website: "🌐", video: "🎬"
+  };
+  const TYPE_LABELS = {
+    journal: "Journal", report: "Report", article: "Article",
+    dataset: "Dataset", book: "Book", website: "Website", video: "Video"
+  };
+
+  const cursorEl = document.getElementById('cursor');
+  window.addEventListener('mousemove', e => {
+    cursorEl.style.left = e.clientX + 'px';
+    cursorEl.style.top  = e.clientY + 'px';
+  });
+
+  function getDomain(url) {
+    try { return new URL(url).hostname.replace('www.', ''); }
+    catch { return url; }
+  }
+
+  function buildCard(src, delay) {
+    const domain = getDomain(src.url);
+    const icon   = TYPE_ICONS[src.type]  || "🔗";
+    const label  = TYPE_LABELS[src.type] || src.type;
+
+    const a = document.createElement('a');
+    a.className   = 'source-card';
+    a.href        = src.url;
+    a.target      = '_blank';
+    a.rel         = 'noopener noreferrer';
+    a.dataset.type = src.type;
+    a.dataset.text = [src.title, src.desc, src.author || '', label].join(' ').toLowerCase();
+    a.style.animationDelay = delay + 's';
+
+    a.innerHTML = `
+      <div class="card-top">
+        <div class="card-icon">${icon}</div>
+        <div class="card-meta">
+          <span class="card-type-badge type-${src.type}">${label}</span>
+          <span class="card-domain">${domain}</span>
+        </div>
+      </div>
+      <div class="card-title">${src.title}</div>
+      ${src.desc ? `<div class="card-desc">${src.desc}</div>` : ''}
+      <div class="card-footer">
+        <span class="card-year">${src.author ? src.author + (src.year ? ' · ' + src.year : '') : (src.year || '')}</span>
+        <span class="card-arrow">↗</span>
+      </div>
+    `;
+    return a;
+  }
+
+  const types = [...new Set(SOURCES.map(s => s.type))].sort();
+  const filterBar = document.getElementById('filter-bar');
+  types.forEach(t => {
+    const btn = document.createElement('button');
+    btn.className    = 'filter-btn';
+    btn.dataset.filter = t;
+    btn.textContent  = TYPE_LABELS[t] || t;
+    filterBar.appendChild(btn);
+  });
+
+  const gridEl      = document.getElementById('sources-grid');
+  const countEl     = document.getElementById('result-count');
+  const searchInput = document.getElementById('search');
+  let activeFilter  = 'all';
+  let searchQuery   = '';
+
+  function render() {
+    const q = searchQuery.trim().toLowerCase();
+    const filtered = SOURCES.filter(s => {
+      const matchType = activeFilter === 'all' || s.type === activeFilter;
+      const matchSearch = !q || [s.title, s.desc||'', s.author||'', s.type]
+        .join(' ').toLowerCase().includes(q);
+      return matchType && matchSearch;
+    });
+
+    gridEl.innerHTML = '';
+
+    if (filtered.length === 0) {
+      gridEl.innerHTML = `<div class="empty-state"><span>🔭</span><p>No sources match your search. Try a different filter or keyword.</p></div>`;
+    } else {
+      filtered.forEach((s, i) => {
+        gridEl.appendChild(buildCard(s, i * 0.05));
+      });
+    }
+
+    countEl.innerHTML = `<span>${filtered.length}</span> source${filtered.length !== 1 ? 's' : ''} found`;
+  }
+
+  filterBar.addEventListener('click', e => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    render();
+  });
+
+  let debounce;
+  searchInput.addEventListener('input', () => {
+    clearTimeout(debounce);
+    debounce = setTimeout(() => {
+      searchQuery = searchInput.value;
+      render();
+    }, 180);
+  });
+
+
+  render();
+  </script>
 </body>
 </html>

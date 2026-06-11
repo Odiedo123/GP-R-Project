@@ -1,3 +1,12 @@
+:root {
+  --accent: #c6db05;
+  --accent-glow: rgba(198, 219, 5, 0.35);
+  --glass: rgba(255,255,255,0.07);
+  --glass-border: rgba(255,255,255,0.15);
+  --text: #f0ece4;
+  --muted: rgba(240,236,228,0.6);
+}
+
 body{
   display: flex;
   flex-direction: column;
@@ -11,7 +20,7 @@ body{
 }
 
 h1{
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .custom-dot-cursor {
@@ -140,54 +149,35 @@ h1{
   overflow: hidden;
 }
 
-#nav-bar{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100vw;
-  height: 10vh;
+#nav-bar {
+  display: flex; flex-direction: row; align-items: center;
+  width: 100vw; height: 10vh; position: sticky; top: 0;
+  z-index: 100;
+  background: rgba(75, 54, 75, 0.55);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--glass-border);
 }
 
-#nav-bar h2{
-  font-family: "Lobster", Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  font-size: 2em;
-  margin-left: 40px;
+#nav-bar h2 {
+  font-family: "Lobster", Arial, sans-serif;
+  cursor: pointer; font-size: 2em; margin-left: 40px; color: var(--accent);
 }
 
-#rest{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-self: flex-end;
-  margin-left: 50%;
-  height: 100%;
-}
-
-#rest a{
-  color: white;
-  font-size: 1.3em;
-  margin: 5vh;
-  cursor: pointer; 
-  font-family: "Oswald", sans-serif;
+#rest {
+  display: flex; flex-direction: row; align-items: center;
+  margin-left: auto; margin-right: 40px; height: 100%;
 }
 
 #rest a {
-  border-bottom: 3px solid transparent; 
-  transition: border-bottom 3s; 
+  color: white; font-size: 1.1em; margin: 0 1.5rem;
+  cursor: pointer; font-family: "Oswald", sans-serif;
+  text-decoration: none; border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-bottom-color 0.3s;
 }
 
-#rest a:hover {
-  animation: hover-link 0.3s forwards; /* Added 'forwards' here */
-}
-
-@keyframes hover-link {
-  from {
-    border-bottom: 3px solid white;
-  }
-  to {
-    border-bottom: 3px solid rgb(0, 255, 242);
-  }
+#rest a:hover { 
+  color: var(--accent); 
+  border-bottom-color: var(--accent); 
 }
 
 .container{
