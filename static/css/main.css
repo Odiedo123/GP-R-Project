@@ -423,6 +423,7 @@ iframe {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 15vh;
+  padding: 5px;
 }
 
 #quote-section div {
@@ -459,20 +460,9 @@ iframe {
 }
 
 #R {
-  margin-left: -16.5vw;
+  text-align: right;
+  margin-left: -20vw;
   white-space: pre;
-}
-
-#R1 {
-  margin-left: 7vw;
-}
-
-#R2 {
-  margin-left: 16vw;
-}
-
-#R3 {
-  margin-left: 35vw;
 }
 
 #third-section {
