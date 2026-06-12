@@ -5,6 +5,8 @@
   --glass-border: rgba(255, 255, 255, 0.15);
   --text: #f0ece4;
   --muted: rgba(240, 236, 228, 0.6);
+  --scroll-lock-offset: 0px;
+  --panel-transition:   750ms; 
 }
 
 body {
@@ -316,7 +318,7 @@ iframe {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 10vh;
   position: sticky;
   top: 0;
@@ -361,7 +363,7 @@ iframe {
 
 
 #first {
-  width: 100vw;
+  width: 100%;
   height: 70vh;
   background: rgba(0, 168, 101, 0.352);
   backdrop-filter: blur(20px) saturate(180%);
@@ -580,27 +582,6 @@ iframe {
   height: 600px;
 }
 
-.sixth-panel {
-  flex: 1;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: transform 0.75s cubic-bezier(0.86, 0, 0.07, 1);
-  will-change: transform;
-}
-
-.sixth-panel--left {
-  transform: translateX(-120vw);
-}
-
-.sixth-panel--right {
-  transform: translateX(120vw);
-}
-
-.sixth-panel--entered {
-  transform: translateX(0);
-}
 
 #top {
   margin-bottom: -20px;
@@ -612,7 +593,7 @@ iframe {
   justify-content: center;
   align-items: center;
   margin-top: 0;
-  width: 100vw;
+  width: 100%;
   height: 70vh;
   background-color: #00cba9;
   border: none;
@@ -804,7 +785,7 @@ iframe {
 .custom-footer {
   margin-top: 20vh;
   height: 45vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -907,7 +888,7 @@ form {
   }
 
   #nav-bar {
-    width: 100vw;
+    width: 100%;
   }
 
   #nav-bar h2 {
@@ -960,7 +941,7 @@ form {
   }
 
   iframe {
-    width: 100vw;
+    width: 100%;
     height: 315px;
   }
 
@@ -1008,4 +989,65 @@ form {
     display: none;
   }
 
+  .sixth-panel {
+    transform : none !important;
+    opacity   : 1   !important;
+  }
+
 }
+ 
+body.scroll-locked {
+  position : fixed;
+  top      : var(--scroll-lock-offset);
+  left     : 0;
+  width    : 100%;
+  overflow : hidden;
+}
+ 
+[id="4L"],
+[id="4R"] {
+  transition:
+    transform var(--panel-transition) cubic-bezier(0.4, 0, 0.2, 1),
+    opacity   var(--panel-transition) cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+ 
+[id="4L"].slide-out-left {
+  transform : translateX(-110%);
+  opacity   : 0;
+}
+ 
+[id="4R"].slide-out-right {
+  transform : translateX(110%);
+  opacity   : 0;
+}
+ 
+.sixth-panel {
+  transition:
+    transform var(--panel-transition) cubic-bezier(0.4, 0, 0.2, 1),
+    opacity   var(--panel-transition) cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+ 
+
+  opacity: 0;
+}
+ 
+.sixth-panel--left {
+  transform: translateX(-110%);
+}
+ 
+.sixth-panel--right {
+  transform: translateX(110%);
+}
+ 
+.sixth-panel--entered {
+  transform : translateX(0);
+  opacity   : 1;
+}
+ 
+.sixth-panel--left,
+.sixth-panel--right {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+ 
