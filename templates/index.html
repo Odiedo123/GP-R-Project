@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Google+sans|Lobster|Roboto&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Google+sans|Lobster|Roboto&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="/static/img/logo.png" type="image/png" sizes="32x32" />
     <script type="importmap">
         {
@@ -16,12 +19,10 @@
         }
         }
     </script>
-    <script
-        src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js"
-        type="module"
-    ></script>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js" type="module"></script>
     <title>Why African Voices Go Unheard</title>
 </head>
+
 <body>
     <div class="custom-dot-cursor"></div>
     <div class="blob-bg">
@@ -37,24 +38,24 @@
     <div id="nav-bar">
         <h2>Odiedo Initiative</h2>
         <div id="rest">
-            <a href="/" style="text-decoration: none; color: white">Home</a>
-            <a href="/about" style="text-decoration: none; color: white">About</a>
-            <a href="/africa" style="text-decoration: none; color: white">Africa</a>
-            <a href="/sources" style="text-decoration: none; color: white">Sources</a>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/africa">Africa</a>
+            <a href="/sources">Sources</a>
         </div>
     </div>
 
-    <div class="section" id="first">                    <!--First Section-->
+    <div class="section" id="first"> <!--First Section-->
         <h1>How are Africans Represented In Global Media?</h1>
         <div id="threejs-model"></div>
     </div>
     <div class="hero-scroll-hint reveal delay-3">
-      <span>Scroll to read</span>
-      <div class="scroll-line"></div>
+        <span>Scroll to read</span>
+        <div class="scroll-line"></div>
     </div>
-    <div class="section" id="quote-section">   
-        <h3 id="name">≋James Baldwin<br> (Antony Barboza | Getty Images)</h3>         <!--Second section-->
-        <div>                                                                            
+    <div class="section" id="quote-section">
+        <h3 id="name">≋James Baldwin<br> (Antony Barboza | Getty Images)</h3> <!--Second section-->
+        <div>
             <p>It is a peculiar triumph of society that it is able to<br>
                 status of the reality of this decree; It has the<br>
                 into fact so that the allegedly inferior<br>
@@ -63,15 +64,15 @@
         <div id="img-place">
             <img src="{{ url_for('static', filename='img/James-Baldwin.png') }}" alt="James Baldwin" id="baldwin">
         </div>
-        <div>                                                                                           
-            <p id="R">    convince those people to whom it has given inferior<br>
+        <div>
+            <p id="R"> convince those people to whom it has given inferior<br>
                 <span id="R1">force and the weapons to translate its dictum<br></span>
                 <span id="R2"> are actually made so insofar as the<br></span>
                 <span id="R3">are concerned.</span>
             </p>
         </div>
     </div>
-    <div class="slider">
+    <div class="slider" id="s1">
         <div class="logos">
             <img src="static/img/adinkrahene.png" alt="">
             <img src="static/img/Amaboko Y'inyanja.png" alt="">
@@ -93,46 +94,28 @@
             <img src="static/img/duafe.png" alt="">
         </div>
     </div>
-    <div class="section" id="third-section">        <!--Third Section-->
+    <div class="section" id="third-section"> <!--Third Section-->
         <div>
             <h2>The Problem Of <span class="orange" id="highlighter"> Western Media </span></h2>
             <p>
-                African representation in Western Media has been at the forefront of many tounges for decades. From negative stereotypes such as a <span id="highlighter" class="red">"dark nation" </span>(Illinois State)
-                and economic disparities of up to $3.2 billion (The Guardian, 2024) it stands for us to see, react and reform these perceptions
+                African representation in Western Media has been at the forefront of many tounges for decades. From
+                negative stereotypes such as a <span id="highlighter" class="red">"dark nation" </span>(Illinois State)
+                and economic disparities of up to $3.2 billion (The Guardian, 2024) it stands for us to see, react and
+                reform these perceptions
                 and trully explore the question, "Why does this happen and what can we do to stop it?".
             </p>
             <button class="connect" onclick="window.location.href='/sources';">
                 Sources
-                <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <path
-                    d="M4 12H20"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                />
-                <path
-                    d="M14 6L20 12L14 18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                />
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M14 6L20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
             </button>
         </div>
         <div>
-            <dotlottie-wc
-                src="https://lottie.host/8427bbca-1339-4b55-8e69-d7adbb5b7a68/CpLjpMpCrV.lottie"
-                style="width: 650px;height: 650px"
-                autoplay
-                loop
-            ></dotlottie-wc>
+            <dotlottie-wc src="https://lottie.host/8427bbca-1339-4b55-8e69-d7adbb5b7a68/CpLjpMpCrV.lottie"
+                style="width: 650px;height: 650px" autoplay loop></dotlottie-wc>
         </div>
     </div>
     <div class="slider">
@@ -157,73 +140,59 @@
             <img src="static/img/duafe.png" alt="">
         </div>
     </div>
-    <div class="section">   <!--Fourth Section -->
+    <div class="section"> <!--Fourth Section -->
         <h2>What are the Effects?</h2>
-            <iframe 
-                width="1120" 
-                height="630" 
-                src="https://www.youtube.com/embed/C_9Q9XELpYI?si=1x250xmkWH6Hnmhp" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
+        <iframe src="https://www.youtube.com/embed/C_9Q9XELpYI?si=1x250xmkWH6Hnmhp" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
     </div>
-    <div class="section"> <!--Fifth Section -->
+    <div class="section" id="fifth-section"> <!--Fifth Section -->
         <div id="4L">
             <h2>Tech In Africa</h2>
-            <p>Africa's booming tech sector is a <span id="highlighter" class="orange">multibillion</span> dollar industry but is shuned by global news outlets
-                with African journalists keying in by echoing western sources (Ajen Africa, 2025). With the most frequent stories used 
-                littered with <span id="highlighter" class="red">corruption</span> and <span id="highlighter" class="red">poverty</span> (Global Media Index, 2024) the tech sector is struggling with startups falling and global measures
+            <p>Africa's booming tech sector is a <span id="highlighter" class="orange">multibillion</span> dollar
+                industry but is shuned by global news outlets
+                with African journalists keying in by echoing western sources (Ajen Africa, 2025). With the most
+                frequent stories used
+                littered with <span id="highlighter" class="red">corruption</span> and <span id="highlighter"
+                    class="red">poverty</span> (Global Media Index, 2024) the tech sector is struggling with startups
+                falling and global measures
                 failing to fit African Innovations (The Conversation, 2025).
             </p>
             <button class="connect" onclick="window.location.href='/sources';">
                 Sources
-                <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <path
-                    d="M4 12H20"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                />
-                <path
-                    d="M14 6L20 12L14 18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                />
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M14 6L20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
             </button>
         </div>
         <div id="4R">
-            <dotlottie-wc
-                src="https://lottie.host/570b96d0-4a82-4502-ac5b-4ed1ca9cbaea/LSbYY2OkCb.lottie"
-                style="width: 650px;height: 650px"
-                autoplay
-                loop
-            ></dotlottie-wc>
+            <dotlottie-wc src="https://lottie.host/570b96d0-4a82-4502-ac5b-4ed1ca9cbaea/LSbYY2OkCb.lottie"
+                style="width: 650px;height: 650px" autoplay loop></dotlottie-wc>
         </div>
     </div>
-    <div class="section" id="sixth-section">  <!-- Sixth Section -->
+    <div class="section" id="sixth-section"> <!-- Sixth Section -->
         <div>
             <img width="650px" height="600px" src="{{url_for('static', filename='img/image.png')}}" />
         </div>
         <div>
             <h2>The Statistics</h2>
-            <p>The graph on the Left by <span id="highlighter" class="orange">(The Global Media Index, 2024)</span> is a heatmap showing coverage of the continent by major new outlets.
+            <p>The graph on the Left by <span id="highlighter" class="orange">(The Global Media Index, 2024)</span> is a
+                heatmap showing coverage of the continent by major new outlets.
                 The disparity when it comes to tech and innovation is clear with conflict and famine
-                a clear favorite across all stations. Now after establishing that the problem exists how can we solve it?
+                a clear favorite across all stations. Now after establishing that the problem exists how can we solve
+                it?
             </p>
         </div>
     </div>
-    <svg id="top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00cba9" fill-opacity="1" d="M0,224L26.7,229.3C53.3,235,107,245,160,234.7C213.3,224,267,192,320,197.3C373.3,203,427,245,480,261.3C533.3,277,587,267,640,261.3C693.3,256,747,256,800,250.7C853.3,245,907,235,960,192C1013.3,149,1067,75,1120,74.7C1173.3,75,1227,149,1280,192C1333.3,235,1387,245,1413,250.7L1440,256L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+    <svg id="top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#00cba9" fill-opacity="1"
+            d="M0,224L26.7,229.3C53.3,235,107,245,160,234.7C213.3,224,267,192,320,197.3C373.3,203,427,245,480,261.3C533.3,277,587,267,640,261.3C693.3,256,747,256,800,250.7C853.3,245,907,235,960,192C1013.3,149,1067,75,1120,74.7C1173.3,75,1227,149,1280,192C1333.3,235,1387,245,1413,250.7L1440,256L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
+        </path>
+    </svg>
     <div class="section" id="seventh-section">
         <div id="seventh-L">
             <div class="glow-effect">
@@ -245,174 +214,160 @@
         <div id="seventh-R">
             <h2 id="titis">Redefine. Reshape. Reimagine</h2>
             <p>In light of this research my view on change is to curb the use of negative Language
-                and hold these sources accountable, giving rise to a new wave of news outlets from the continent to the 
+                and hold these sources accountable, giving rise to a new wave of news outlets from the continent to the
                 continent with no intermediary.
             </p>
             <button class="connect" onclick="window.location.href='/africa';">
                 Redefine Africa
-                <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <path
-                    d="M4 12H20"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                />
-                <path
-                    d="M14 6L20 12L14 18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                />
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M14 6L20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
             </button>
         </div>
     </div>
-    <svg class="flip-svg" style="margin-bottom: -100px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00cba9"  fill-opacity="1" d="M0,96L0,192L45,192L45,0L90,0L90,288L135,288L135,288L180,288L180,128L225,128L225,256L270,256L270,128L315,128L315,96L360,96L360,224L405,224L405,192L450,192L450,96L495,96L495,64L540,64L540,160L585,160L585,64L630,64L630,32L675,32L675,192L720,192L720,32L765,32L765,288L810,288L810,32L855,32L855,160L900,160L900,96L945,96L945,0L990,0L990,160L1035,160L1035,224L1080,224L1080,128L1125,128L1125,128L1170,128L1170,160L1215,160L1215,32L1260,32L1260,128L1305,128L1305,320L1350,320L1350,32L1395,32L1395,160L1440,160L1440,320L1395,320L1395,320L1350,320L1350,320L1305,320L1305,320L1260,320L1260,320L1215,320L1215,320L1170,320L1170,320L1125,320L1125,320L1080,320L1080,320L1035,320L1035,320L990,320L990,320L945,320L945,320L900,320L900,320L855,320L855,320L810,320L810,320L765,320L765,320L720,320L720,320L675,320L675,320L630,320L630,320L585,320L585,320L540,320L540,320L495,320L495,320L450,320L450,320L405,320L405,320L360,320L360,320L315,320L315,320L270,320L270,320L225,320L225,320L180,320L180,320L135,320L135,320L90,320L90,320L45,320L45,320L0,320L0,320Z"></path></svg>
-    <div class="section-8th">  <!--Eight Section -->
+    <svg class="flip-svg" style="margin-bottom: -100px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#00cba9" fill-opacity="1"
+            d="M0,96L0,192L45,192L45,0L90,0L90,288L135,288L135,288L180,288L180,128L225,128L225,256L270,256L270,128L315,128L315,96L360,96L360,224L405,224L405,192L450,192L450,96L495,96L495,64L540,64L540,160L585,160L585,64L630,64L630,32L675,32L675,192L720,192L720,32L765,32L765,288L810,288L810,32L855,32L855,160L900,160L900,96L945,96L945,0L990,0L990,160L1035,160L1035,224L1080,224L1080,128L1125,128L1125,128L1170,128L1170,160L1215,160L1215,32L1260,32L1260,128L1305,128L1305,320L1350,320L1350,32L1395,32L1395,160L1440,160L1440,320L1395,320L1395,320L1350,320L1350,320L1305,320L1305,320L1260,320L1260,320L1215,320L1215,320L1170,320L1170,320L1125,320L1125,320L1080,320L1080,320L1035,320L1035,320L990,320L990,320L945,320L945,320L900,320L900,320L855,320L855,320L810,320L810,320L765,320L765,320L720,320L720,320L675,320L675,320L630,320L630,320L585,320L585,320L540,320L540,320L495,320L495,320L450,320L450,320L405,320L405,320L360,320L360,320L315,320L315,320L270,320L270,320L225,320L225,320L180,320L180,320L135,320L135,320L90,320L90,320L45,320L45,320L0,320L0,320Z">
+        </path>
+    </svg>
+    <div class="eigth-section"> <!--Eight Section -->
         <div id="faq">
             <div class="faq-item">
                 <button class="faq-btn">
-                Why should I care?
-                <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"/>
-                </svg>
+                    Why should I care?
+                    <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
                 </button>
                 <div class="faq-body">
                     <p>
-                        The only response I can give is a moral one. Why should we allow our fellow humans to be dehumanized?
-                        From genocides to colonialisim, the evils of human nature have been revealed through these grotesque ways 
-                        and why should we allow them to continue? Another chance for persecution? To what end? When will we stop and what
+                        The only response I can give is a moral one. Why should we allow our fellow humans to be
+                        dehumanized?
+                        From genocides to colonialisim, the evils of human nature have been revealed through these
+                        grotesque ways
+                        and why should we allow them to continue? Another chance for persecution? To what end? When will
+                        we stop and what
                         will it take? It all starts with caring and as such can let the world bloom into a new stage.
-                    </p></div>
+                    </p>
+                </div>
             </div>
             <div class="faq-item">
                 <button class="faq-btn">
-                What if Africa just lacks Innovation?
-                <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"/>
-                </svg>
+                    What if Africa just lacks Innovation?
+                    <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
                 </button>
                 <div class="faq-body">
                     <p>
                         Allowing a single thought to permutate your existance is never the right cause and such
-                        is the case here. Boiling down a group into one statement allows for stereotypes like these to occur.
-                        Africans are not poor, they are thriving. With fast growing cities and even faster runners they are a force
+                        is the case here. Boiling down a group into one statement allows for stereotypes like these to
+                        occur.
+                        Africans are not poor, they are thriving. With fast growing cities and even faster runners they
+                        are a force
                         in the global scene.
-                    </p></div>
+                    </p>
+                </div>
             </div>
             <div class="faq-item">
                 <button class="faq-btn">
-                Isn't the problem already fixed?
-                <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"/>
-                </svg>
+                    Isn't the problem already fixed?
+                    <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
                 </button>
                 <div class="faq-body">
                     <p>
-                        A problem is never fixed until all cases are dealth with. From math to our social life this holds true.
-                        Although marginal improvements have been made we've never been taught to settle for mediocre have we?
-                        The plight of African in our societies need a revamped media scene and to achieve this is a communal effort.
-                    </p></div>
+                        A problem is never fixed until all cases are dealth with. From math to our social life this
+                        holds true.
+                        Although marginal improvements have been made we've never been taught to settle for mediocre
+                        have we?
+                        The plight of African in our societies need a revamped media scene and to achieve this is a
+                        communal effort.
+                    </p>
+                </div>
             </div>
             <div class="faq-item">
                 <button class="faq-btn">
-                What can I do?
-                <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"/>
-                </svg>
+                    What can I do?
+                    <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
                 </button>
                 <div class="faq-body">
                     <p>
-                        To change we need to become one and avoid intaking these negative stereotypes the danger of 
-                        a single story is real and its effects have never been clearer. Learn to view multiple perspectives, 
-                        look for different sources and question what you intake because change must first come from within.
-                    </p></div>
+                        To change we need to become one and avoid intaking these negative stereotypes the danger of
+                        a single story is real and its effects have never been clearer. Learn to view multiple
+                        perspectives,
+                        look for different sources and question what you intake because change must first come from
+                        within.
+                    </p>
+                </div>
             </div>
             <div class="faq-item">
                 <button class="faq-btn">
-                What is the Beyonce Paradox?
-                <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"/>
-                </svg>
+                    What is the Beyonce Paradox?
+                    <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
                 </button>
-                <div class="faq-body"><p>The fact that one Black woman—or even a small group of celebrities—is
-                     incredibly wealthy does not change the systemic hurdles that regular Black and African people face every day.
-                     Individual success does not automatically eliminate widespread, structural inequality.</p></div>
+                <div class="faq-body">
+                    <p>The fact that one Black woman—or even a small group of celebrities—is
+                        incredibly wealthy does not change the systemic hurdles that regular Black and African people
+                        face every day.
+                        Individual success does not automatically eliminate widespread, structural inequality.</p>
+                </div>
             </div>
         </div>
     </div>
     <button class="connect" onclick="window.location.href='/sources';">
-                Learn More
-                <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <path
-                    d="M4 12H20"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                />
-                <path
-                    d="M14 6L20 12L14 18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                />
-                </svg>
-            </button>
+        Learn More
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M14 6L20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
     <footer class="custom-footer">
-      <div class="footer-left">
-        <img
-          src="static/img/logo.png"
-          alt="Melofy Logo"
-          class="footer-logo"
-        />
-        <div id="socials">
-          <div>
-            <img src="static/img/tiktok.svg" alt="Tiktok Logo" />
-          </div>
-          <div>
-            <img src="static/img/x.svg" alt="X Logo" />
-          </div>
-          <div>
-            <img src="static/img/youtube.svg" alt="Youtube Logo" />
-          </div>
-          <div>
-            <img src="static/img/instagram.svg" alt="Instagram Logo" />
-          </div>
+        <div class="footer-left">
+            <img src="static/img/logo.png" alt="Melofy Logo" class="footer-logo" />
+            <div id="socials">
+                <div>
+                    <img src="static/img/tiktok.svg" alt="Tiktok Logo" />
+                </div>
+                <div>
+                    <img src="static/img/x.svg" alt="X Logo" />
+                </div>
+                <div>
+                    <img src="static/img/youtube.svg" alt="Youtube Logo" />
+                </div>
+                <div>
+                    <img src="static/img/instagram.svg" alt="Instagram Logo" />
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="footer-divider"></div>
+        <div class="footer-divider"></div>
 
-      <div class="footer-right">
-        <h3>Connect for our Newsletter</h3>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Enter your email" required />
-          <button type="submit" class="connect" id="news-button">
-            Subscribe
-          </button>
-        </form>
-        <h3 id="email">jed.o@aoa.school</h3>
-      </div>
+        <div class="footer-right">
+            <h3>Connect for our Newsletter</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit" class="connect" id="news-button">
+                    Subscribe
+                </button>
+            </form>
+            <h3 id="email">jed.o@aoa.school</h3>
+        </div>
     </footer>
-   <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
+
 </html>
