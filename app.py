@@ -7,7 +7,7 @@ load_dotenv("keys.env")
 
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET_KEY')
-
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 31536000 
 @app.route("/")
 def home_page():
     return render_template('index.html')
